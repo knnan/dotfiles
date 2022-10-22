@@ -1,0 +1,27 @@
+[Desktop Entry]
+DefaultProfile=Material-Ocean.profile
+
+[DownloadDialog Settings]
+Height 1080=502
+Height 900=502
+Width 1600=700
+Width 1920=700
+
+[Favorite Profiles]
+Favorites=Neen Green.profile,solarized light.profile,Material-Ocean.profile,Nee Green Light.profile
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1080=538
+Height 900=833
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA8AAAAP1AAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1600=800
+Width 1920=786
+
+[TabBar]
+TabBarUseUserStyleSheet=true
+TabBarUserStyleSheetFile=file:///home/knnan/.local/share/konsole/konsole-tabstyle.css
