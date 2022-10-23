@@ -81,6 +81,7 @@ _fzf_compgen_dir() {
 }
 
 FZF_CTRL_T_COMMAND='fdfind --hidden --follow --exclude ".git" --exclude "node_modules" .'
+FZF_CTRL_K_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude "node_modules" . ~'
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/key-bindings.zsh
