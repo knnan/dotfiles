@@ -14,5 +14,8 @@ Parent=FALLBACK/
 TerminalCenter=true
 TerminalMargin=14
 
+[Keyboard]
+KeyBindings=default
+
 [Terminal Features]
 BlinkingCursorEnabled=true

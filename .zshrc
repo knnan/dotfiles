@@ -67,7 +67,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 '
 
 
-bindkey '^ ' autosuggest-accept
+# bindkey '^ ' autosuggest-accept
+bindkey '\e[20;5~' autosuggest-accept
 
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find

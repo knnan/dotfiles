@@ -23,6 +23,8 @@
 						"style": "folder"
 					},
 					"style": "plain",
+					// "template": " \ue5ff  {{ .Path }} ",
+					// "template": " <#09be73>\u2877</> \ue5ff  {{ .Path }} ",
 					"template": " {{ .Path }} ",
 					"type": "path"
 				},
