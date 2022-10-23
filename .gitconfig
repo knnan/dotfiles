@@ -1,6 +1,7 @@
 [credential]
 	helper = store
 	UseHttpPath = true
+
 [user]
 	name = knnan
 	email = 28503456+knnan@users.noreply.github.com
