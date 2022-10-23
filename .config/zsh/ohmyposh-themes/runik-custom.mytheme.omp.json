@@ -12,9 +12,10 @@
 					"style": "diamond",
 					"foreground": "#a9ffb4",
 					"leading_diamond": "<#09be73>\u28FF </>",
-					"template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2871 迎</>",
-					"template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>波涛</>",
-					"template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2871</>",
+					// "template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2871 迎</>",
+					// "template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>波涛</>",
+					// "template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2871</>",
+					"template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2877</>",
 					"properties": {
 						"display_host": true
 					}
@@ -34,7 +35,7 @@
 					"foreground": "#6468bb",
 					"template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
 					"properties": {
-						"branch_icon": "",
+						"branch_icon": "\uE0A0 ",
 						"fetch_stash_count": true,
 						"fetch_status": true,
 						"fetch_upstream_icon": true,

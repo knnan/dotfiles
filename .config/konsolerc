@@ -8,7 +8,7 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=Neen Green.profile,Material-Ocean.profile,Nee Green Light.profile,solarized light.profile
+Favorites=Material-Ocean.profile,Neen Green.profile,solarized light.profile,Nee Green Light.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
@@ -16,10 +16,12 @@ ShowMenuBarByDefault=false
 [MainWindow]
 Height 1080=577
 Height 900=833
-State=AAAA/wAAAAD9AAAAAAAAA7UAAAImAAAABAAAAAQAAAAIAAAACPwAAAAA
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAP3AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1600=800
 Width 1920=949
+Window-Maximized 1080x1920=true
 
 [TabBar]
 TabBarUseUserStyleSheet=true
