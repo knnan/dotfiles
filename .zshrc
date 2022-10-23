@@ -67,6 +67,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 '
 
 
+bindkey '^ ' autosuggest-accept
+
+
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
@@ -122,6 +125,7 @@ alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.vim"
 alias batconfig="vi ~/.config/bat/config"
 alias cat='bat'
+alias hh='cd ~'
 alias reload="source ~/.zshrc"
 alias lst="tree -L 1"
 alias python=python3

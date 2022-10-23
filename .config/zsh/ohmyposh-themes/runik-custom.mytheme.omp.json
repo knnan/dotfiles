@@ -12,10 +12,7 @@
 					"style": "diamond",
 					"foreground": "#a9ffb4",
 					"leading_diamond": "<#09be73>\u28FF </>",
-					// "template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2871 迎</>",
-					// "template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>波涛</>",
-					// "template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2871</>",
-					"template": "{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2877</>",
+					"template": "{{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2877</>",
 					"properties": {
 						"display_host": true
 					}
