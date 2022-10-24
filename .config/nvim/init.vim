@@ -8,8 +8,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/airblade/vim-rooter'
 " improved incremental search plugin
 Plug 'haya14busa/incsearch.vim'
-" autocompletion plugin
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " language packs plugink
 Plug 'sheerun/vim-polyglot'

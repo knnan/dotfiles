@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 #
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+# zmodload zsh/zprof
 export EDITOR="nvim"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -29,7 +29,8 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 export HISTORY_IGNORE="google*"
-
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
 
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -43,12 +44,9 @@ setopt HIST_SAVE_NO_DUPS
 SAVEHIST=999999
 HISTSIZE=1099999
 
-plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-z web-search copybuffer git fzf fzf-tab autoupdate node colored-man-pages docker-compose )
-
+plugins=(zsh-nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z web-search copybuffer git fzf fzf-tab autoupdate node colored-man-pages docker-compose )
 
 # FZF configuration
-
-
 alias fd="fdfind"
 
 # Setting rg as the default source for fzf
@@ -92,30 +90,6 @@ source ~/.config/zsh/key-bindings.zsh
 
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
 
 
 alias zshconfig="vi ~/.zshrc"
@@ -201,7 +175,10 @@ kk() {
   fi
 }
 
-
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
 vif() {
     nvim $(fzf)
 }
@@ -252,4 +229,5 @@ LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 export LS_COLORS
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+# zprof # bottom of .zshrc
 
