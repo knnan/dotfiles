@@ -158,8 +158,17 @@ sudo systemctl $1 docker.service
 }
 
 tnt(){
-    echo "" ~/.tmp-note
-    vi ~/.tmp-note
+     if [ $# -eq 0 ]
+    then
+        vi ~/.tmp-note
+    elif [ $1 = c  ]
+    then
+        echo "" > ~/.tmp-note
+    elif [ $1 = e ]
+    then
+        bash ~/.tmp-note
+    fi
+
 }
 
 
