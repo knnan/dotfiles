@@ -100,6 +100,7 @@ alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.vim"
 alias batconfig="vi ~/.config/bat/config"
 alias cat='bat'
+alias df='duf'
 alias hh='cd ~'
 alias reload="source ~/.zshrc"
 alias lst="tree -L 1"

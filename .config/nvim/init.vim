@@ -259,6 +259,7 @@ inoremap <C-Z> <Esc>ui
 nnoremap <C-Y> <C-R>
 inoremap <C-Y> <Esc><C-R>i
 
+vnoremap <C-x> d
 vnoremap <C-c> y
 
 
@@ -267,6 +268,3 @@ nnoremap <C-_> :Commentary<CR>
 inoremap <C-_> <Esc>:Commentary<CR>i
 vnoremap <C-_> :Commentary<CR>
 
-
-" coc configs
-" source $HOME/.config/nvim/module_configs/coc.vim
