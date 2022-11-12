@@ -1,0 +1,55 @@
+.bashrc
+.config/bat/config
+.config/htop/htoprc
+.zshrc
+scripts/print_color.sh
+scripts/show_colors.sh
+scripts/test_ls_colors.sh
+sys-conf-info/full-backup.ini
+sys-conf-info/gnome-settings.conf
+sys-conf-info/installed-programs.txt
+sys-conf-info/system-config.md
+sys-conf-info/update/Downloads/dotfiles/sys-conf-info/installed-programs.txt
+sys-conf-info/update/Downloads/install-cmds.md
+sys-conf-info/update/Downloads/installatino-proces.txt
+sys-conf-info/update/Downloads/pr-to-ins.txt
+wallpapers/142215138_780330279238262_6824403123382750410_n.jpg
+wallpapers/142792560_121045356551821_8369433860584706733_n.jpg
+wallpapers/209051.jpg
+wallpapers/6f54160c5c81c652.jpeg
+wallpapers/FWG_2560x1440.jpg
+wallpapers/FWO_2560x1440.jpg
+wallpapers/FalseGods.jpg
+wallpapers/FalseGods2.jpg
+wallpapers/Nature-Minimalist-Wallpaper-1920x1080-00731.jpg
+wallpapers/Polygon-Wallpaper-54-3840x2160.jpg
+wallpapers/Screenshot_20201029_195819.png
+wallpapers/Wallpaper (1).jpg
+wallpapers/Wallpaper (2).jpg
+wallpapers/Wallpaper (3).jpg
+wallpapers/Wallpaper (4).jpg
+wallpapers/Wallpaper.jpg
+wallpapers/avatasssr2.jpeg
+wallpapers/baby-yoda-the-mandalorian-minimalist-36-1366x768.jpg
+wallpapers/bruce_lee-wallpaper-1366x768.jpg
+wallpapers/chun-lo-wolf.jpg
+wallpapers/cyberpunk.jpg
+wallpapers/d2b57fa26d5bdf3734859e22f6405ad6.png
+wallpapers/deadpool-wade-wilson-green-katana-ninjas-1366x768-107503 (2).jpg
+wallpapers/deadpool-wade-wilson-green-katana-ninjas-1366x768-107503.jpg
+wallpapers/fasd.png
+wallpapers/imageedit_4_7688198747.jpg
+wallpapers/just_low_poly__by_pyxartz-da72vz4.jpg
+wallpapers/low_poly_dead_zone__by_pyxartz-d70mi5r.jpg
+wallpapers/low_poly_polygon_landscape_abstraction_103765_1366x768.jpg
+wallpapers/mh.jpg
+wallpapers/neongenesiz.jpg
+wallpapers/road_marking_cloudy_124093_1366x768 (1).jpg
+wallpapers/rorschach-1567709993017-6179.jpg
+wallpapers/samurai.jpg
+wallpapers/samurai_extraGreen.jpg
+wallpapers/star-wars-dark-red-8k-yi-1366x768.jpg
+wallpapers/star-wars-minimalism-art-5k-zv-1366x768.jpg
+wallpapers/star-wars-minimalism-artwork-5k-bo-1366x768.jpg
+wallpapers/star-wars-stormtrooper-minimal-art-z4-1366x768.jpg
+wallpapers/travis-scott-wallpapers-wallpaper-cave-1.jpg
