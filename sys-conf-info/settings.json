@@ -1,0 +1,382 @@
+{
+    "C_Cpp.intelliSenseCacheSize": 1120,
+    "Notes.notesLocation": "/home/knnan/Development/docs-workspace/Notes",
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+    },
+    "[dotenv]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "Koihik.vscode-lua-format"
+    },
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "bradymholt.pgformatter"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true
+    },
+    "alignment.surroundSpace": {
+        "arrow": [1, 1],
+        "assignment": [1, 1],
+        "colon": [1, 1],
+        "comment": 2
+    },
+    "aws.codeWhisperer.includeSuggestionsWithCodeReferences": false,
+    "aws.profile": "profile:pcloudy-dev-aws",
+    "aws.samcli.enableCodeLenses": false,
+    "aws.telemetry": false,
+    "breadcrumbs.enabled": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.customCommand": "clear",
+    "code-runner.enableAppInsights": false,
+    "code-runner.executorMap": {
+        // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt.out",
+        "cpp": "cd $dir && run $fileName "
+    },
+    "code-runner.executorMapByFileExtension": {
+        ".pde": "cd $dir && processing-java --force --sketch=$dirWithoutTrailingSlash --run"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "codestream.email": "kiran.yadav@sstsinc.com",
+    "codestream.serverUrl": "https://api.codestream.com",
+    "customWindowZoom.zoomLevelChangeValue": 0.1,
+    "debug.allowBreakpointsEverywhere": true,
+    "diffEditor.maxComputationTime": 0,
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.markdownlint": true
+    },
+    "editor.cursorBlinking": "smooth",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.foldingMaximumRegions": 7000,
+    "editor.fontFamily": "Iosevka, 'JetBrainsMono Nerd Font Mono', 'JetBrains Mono', 'SpaceMono Nerd Font Mono'",
+    "editor.fontLigatures": true,
+    // "editor.fontWeight": "Regular",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.insertSpaces": false,
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelScrollSensitivity": 1,
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.quickSuggestionsDelay": 0,
+    "editor.renderWhitespace": "none",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
+    },
+    "editor.smoothScrolling": true,
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.preview": true,
+    "editor.suggest.showMethods": true,
+    "editor.tabSize": 4,
+    "editor.tokenColorCustomizations": {
+        "[Community Material Theme Ocean High Contrast]": {
+            "textMateRules": [
+                {
+                    "scope": ["variable.other.local"],
+                    "settings": {
+                        "foreground": "#baff92"
+                    }
+                }
+                // {
+                //     "scope": [
+                //         "variable.other.object.property.js"
+                //     ],
+                //     "settings": {
+                //         "foreground": "#baff92"
+                //     }
+                // },
+                // {
+                //     "scope": [
+                //         "variable.other.property.js"
+                //     ],
+                //     "settings": {
+                //         "foreground": "#baff92"
+                //     }
+                // },
+                // {
+                //   "scope": ["variable.other.readwrite.js"],
+                //   "settings": {
+                //     "foreground": "#f07178"
+                //   }
+                // }
+            ]
+        }
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.wordWrap": "on",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.alwaysShowStatus": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "files.associations": {
+        "*.sh": "shellscript"
+    },
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/*.class": false,
+        "**/*.exe": false,
+        "**/*.out": false,
+        "**/.tmp.*": false
+    },
+    "files.insertFinalNewline": true,
+    "files.simpleDialog.enable": true,
+    "files.trimTrailingWhitespace": false,
+    "git.confirmSync": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": true
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.mode.active": "review",
+    "go.autocompleteUnimportedPackages": true,
+    "go.docsTool": "gogetdoc",
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+    "javascript.format.semicolons": "insert",
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+    "javascript.preferences.quoteStyle": "double",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "json.schemas": [],
+    "jupyter.askForKernelRestart": false,
+    "leetcode.workspaceFolder": "/home/knnan/Development/interview-workspace/leetcode",
+    "makefile.configureOnOpen": false,
+    "markdownlint.config": {
+        "MD004": {
+            "style": "asterisk"
+        },
+        "MD007": {
+            "indent": 4
+        },
+        //  "default": true,
+        //  "MD007": { "indent": 4 },
+        "no-hard-tabs": false
+    },
+    "material-icon-theme.folders.color": "#7cb342",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.showWelcomeMessage": false,
+    "path-intellisense.extensionOnImport": true,
+    "projectManager.tags": ["work/pcloudy", "personal", "docker-workspace", "prototyping", "node-workspace", "go-workspace", "web-workspace"],
+    "projectManager.vscode.baseFolders": ["~/Development"],
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.formatting.blackArgs": ["--line-length", "200"],
+    "python.formatting.provider": "black",
+    "redhat.telemetry.enabled": false,
+    // An array of extensions to exclude from the relative path url (Useful for used with Webpack or when importing files of mixed types)
+    "relativePath.excludedExtensions": [],
+    "relativePath.removeExtension": false,
+    "rest-client.enableCustomVariableReferencesCodeLens": false,
+    "rest-client.fontSize": 13,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "settingsSync.ignoredSettings": ["-window.zoomLevel"],
+    "shellcheck.disableVersionCheck": true,
+    "shellcheck.exclude": ["2006"],
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/usr/bin/bash"
+        },
+        "zsh": {
+            "path": "/usr/bin/zsh"
+        }
+    },
+    "terminal.integrated.rightClickBehavior": "selectWord",
+    "terminal.integrated.showExitAlert": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+    "typescript.format.semicolons": "insert",
+    "window.closeWhenEmpty": false,
+    "window.restoreFullscreen": false,
+    "workbench.colorCustomizations": {
+        "[Community Material Theme Ocean High Contrast]": {
+            "editor.background": "#0f1014",
+            "icon.foreground": "#acd891",
+            "panelTitle.activeForeground": "#76bb95"
+        },
+        "[Blast Dark]": {
+            "statusBar.background": "#00000030",
+            "statusBar.foreground": "#b6b3b3"
+        },
+        "terminal.ansiBlack": "#151010",
+        "terminal.ansiBlue": "#5b46d1",
+        "terminal.ansiBrightBlack": "#818383",
+        "terminal.ansiBrightBlue": "#a798e7",
+        "terminal.ansiBrightCyan": "#14f0f0",
+        "terminal.ansiBrightGreen": "#cafc79",
+        "terminal.ansiBrightMagenta": "#f935f8",
+        "terminal.ansiBrightRed": "#fc391f",
+        "terminal.ansiBrightWhite": "#e9ebeb",
+        "terminal.ansiBrightYellow": "#eaec23",
+        "terminal.ansiCyan": "#33bbc8",
+        "terminal.ansiGreen": "#baee7f",
+        "terminal.ansiMagenta": "#d338d3",
+        "terminal.ansiRed": "#df554b",
+        "terminal.ansiWhite": "#cbcccd",
+        "terminal.ansiYellow": "#6bcf72",
+        "terminal.background": "#0F111A",
+        "terminal.foreground": "#93e659"
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.localHistory.maxFileEntries": 10,
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.useSplitJSON": true,
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 12,
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "yaml.schemas": {},
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "prettier.printWidth": 200,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "none",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.tabCompletion": "on",
+    "window.titleBarStyle": "custom",
+    "editor.fontWeight": "430",
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.tabs.separator": " : ",
+    "terminal.integrated.tabs.showActions": "always",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "workbench.editor.pinnedTabSizing": "shrink",
+    "zenMode.centerLayout": false,
+    "zenMode.hideTabs": false,
+    "zoombar.zoomUnit": 4,
+    "zoombar.uiDisplayOrder": "@-%+",
+    "editor.lineHeight": 23,
+    "editor.fontSize": 14.8,
+    "zenMode.hideLineNumbers": false,
+    "errorLens.enabled": false,
+    "gitlens.mode.statusBar.alignment": "left",
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "go.toolsManagement.autoUpdate": true,
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "go.survey.prompt": false,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.ignoreSelection": true,
+    "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+    "shellcheck.customArgs": ["-x"],
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "window.zoomLevel": -0.76,
+    "rest-client.enableTelemetry": false
+}
