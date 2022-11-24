@@ -1,6 +1,7 @@
 [Appearance]
 ColorScheme=material copy
-Font=Iosevka Term,10,-1,5,50,0,0,0,0,0
+Font=Iosevka Term,9,-1,5,50,0,0,0,0,0
+UseFontLineChararacters=true
 
 [Cursor Options]
 CursorShape=1

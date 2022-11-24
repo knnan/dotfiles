@@ -1,0 +1,15 @@
+[Added Associations]
+inode/directory=code.desktop;org.gnome.gedit.desktop;
+text/plain=sublime_text.desktop;code.desktop;
+video/x-matroska=vlc.desktop;
+audio/mpeg=com.github.neithern.g4music.desktop;org.musicbrainz.Picard.desktop;spek.desktop;vlc.desktop;
+audio/flac=com.github.neithern.g4music.desktop;org.musicbrainz.Picard.desktop;spek.desktop;
+text/markdown=code.desktop;
+
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/eclipse+command=_usr_share_dbeaver-ce_.desktop

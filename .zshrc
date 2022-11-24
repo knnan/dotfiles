@@ -9,12 +9,11 @@ export LANGUAGE=en_US.UTF-8
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
-export SPICETIFY_INSTALL="$HOME/spicetify-cli"
 
-export PATH="$SPICETIFY_INSTALL:$PATH"
 # set up Go lang path #
 export GOPATH=$HOME/go
-PATH=/bin:/usr/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.ssh:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/go/bin:${PATH}
+
+PATH=/bin:/usr/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.ssh:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/go/bin:${PATH}:$HOME/.spicetify
 export PATH
 
 # ZSH_THEME="robbyrussell"
@@ -232,3 +231,4 @@ export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 # zprof # bottom of .zshrc
 
+export PATH=$PATH:/home/knnan/.spicetify
