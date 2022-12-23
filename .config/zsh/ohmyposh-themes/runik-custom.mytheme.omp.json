@@ -40,6 +40,20 @@
 						"fetch_upstream_icon": true,
 						"fetch_worktree_count": true
 					}
+				},
+				{
+					"type": "python",
+					"style": "diamond",
+					"display_mode": "context",
+					"foreground": "#6468bb",
+					"template": " \uE235  {{  .Full }} {{ .Venv }}"
+				},
+				{
+					"type": "node",
+					"style": "diamond",
+					"display_mode": "files",
+					"foreground": "#6468bb",
+					"template": " \uE718  {{ .Full }} "
 				}
 			],
 			"newline": true

@@ -98,6 +98,7 @@ alias sshconfig-work="vi ~/.ssh/conf.d/config.work"
 alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.vim"
 alias batconfig="vi ~/.config/bat/config"
+alias ls='exa'
 alias cat='bat'
 alias df='duf'
 alias hh='cd ~'
@@ -112,6 +113,7 @@ alias vpn_connect="sudo openvpn --cd ~/vpn --config client.ovpn  --auth-user-pas
 alias usa_vpn_connect="sudo openvpn --cd ~/vpn/usa_dc_vpn --config usa_dc_ssl_vpn_config.ovpn  --auth-user-pass usa_dc_auth.txt"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sys-update="sudo apt update -y && sudo apt upgrade -y"
+alias shl-update="upgrade_oh_my_zsh_all"
 
 
 if type nvim > /dev/null 1>&1; then
