@@ -44,9 +44,9 @@ spotify
    
    
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
    
-   
-   
+
    ```
 
 3. powerlevel9k

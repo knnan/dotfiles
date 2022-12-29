@@ -55,14 +55,17 @@ gnome-tweaks
 ```
 gnome-extensions list --user
 
-ding@rastersoft.com
 bluetooth-quick-connect@bjarosze.gmail.com
-clipboard-indicator@tudmotu.com
 Vitals@CoreCoding.com
-CoverflowAltTab@palatis.blogspot.com
-status-area-horizontal-spacing@mathematical.coffee.gmail.com
 color-picker@tuberry
+status-area-horizontal-spacing@mathematical.coffee.gmail.com
+clipboard-indicator@tudmotu.com
+CoverflowAltTab@palatis.blogspot.com
 wintile@nowsci.com
+display-switcher@iyadk.com
+workspace-switch-wraparound@theychx.org
+
+
 
 
 ```
