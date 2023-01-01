@@ -65,8 +65,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 
 # bindkey '^ ' autosuggest-accept
-# bindkey '\e[20;5~' autosuggest-accept
-bindkey '5~' autosuggest-accept
+# bindkey '5~' autosuggest-accept
 
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
@@ -87,6 +86,8 @@ FZF_CTRL_K_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/key-bindings.zsh
+
+bindkey '\e[20;5~' autosuggest-accept
 
 
 export NVM_DIR="$HOME/.nvm"
