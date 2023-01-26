@@ -2,9 +2,12 @@
 inode/directory=obsidian.desktop;code.desktop;org.gnome.gedit.desktop;
 text/plain=code.desktop;sublime_text.desktop;
 video/x-matroska=vlc.desktop;
-audio/mpeg=com.github.neithern.g4music.desktop;spek.desktop;org.musicbrainz.Picard.desktop;vlc.desktop;
+audio/mpeg=org.musicbrainz.Picard.desktop;spek.desktop;vlc.desktop;com.github.neithern.g4music.desktop;net.sourceforge.kid3.desktop;
 audio/flac=com.github.neithern.g4music.desktop;org.musicbrainz.Picard.desktop;spek.desktop;
 text/markdown=code.desktop;
+x-scheme-handler/sms=org.gnome.Shell.Extensions.ZorinConnect.desktop;
+x-scheme-handler/tel=org.gnome.Shell.Extensions.ZorinConnect.desktop;
+audio/x-vorbis+ogg=org.gnome.Totem.desktop;com.github.neithern.g4music.desktop;spek.desktop;
 
 [Default Applications]
 text/html=google-chrome.desktop

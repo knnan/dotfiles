@@ -1,5 +1,5 @@
 <configuration version="37">
-    <folder id="9zkt7-m6eye" label="Obsidian-vaults" path="/home/knnan/obsidian-vaults" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="sosrp-nhvt5" label="obsidian-vaults" path="/home/knnan/obsidian-vaults" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="AX4FPNY-WVWIPY5-4PBTVPU-WV4XBWN-UY6VDWB-PWNXAIU-JKGD3LY-S5CCZAT" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -66,7 +66,7 @@
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
     </device>
-    <device id="YXNIPEE-WAAY7FY-OCKDOSO-WY5FFIG-EK5RPOE-S3V4FQY-FHQKSUN-YMXMFA7" name="oneplus 7" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="YXNIPEE-WAAY7FY-OCKDOSO-WY5FFIG-EK5RPOE-S3V4FQY-FHQKSUN-YMXMFA7" name="oneplus7(GM1901)" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>

@@ -116,6 +116,8 @@ alias usa_vpn_connect="sudo openvpn --cd ~/vpn/usa_dc_vpn --config usa_dc_ssl_vp
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sys-update="sudo apt update -y && sudo apt upgrade -y"
 alias shl-update="upgrade_oh_my_zsh_all"
+alias dd="dev-dockers"
+
 
 
 if type nvim > /dev/null 1>&1; then
@@ -149,6 +151,12 @@ tnt(){
 
 }
 
+ext-reload(){
+    gnome-extensions disable display-switcher@iyadk.com
+    gnome-extensions disable wintile@nowsci.com
+    gnome-extensions enable display-switcher@iyadk.com
+    gnome-extensions enable wintile@nowsci.com
+}
 
 search-pkg() {
     apt-cache search $1
@@ -159,6 +167,12 @@ install-pkg() {
 remove-pkg() {
     sudo apt remove --purge "$@"
     sudo apt autoclean -y && sudo apt autoremove -y
+}
+system-update() {
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean -y
 }
 
 tl() {
