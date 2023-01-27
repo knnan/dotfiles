@@ -10,6 +10,7 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
+opt.breakindent = true -- enable break indent
 
 -- line wrapping
 opt.wrap = false
@@ -17,26 +18,27 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.hlsearch = true -- set highlight on search
+
+-- Decrease update time
+opt.updatetime = 250
+opt.signcolumn = 'yes'
 
 -- cursor line
 opt.cursorline = true
 
 -- cursor shape and blink
-opt.guicursor="a:ver25,a:blinkon250"
+opt.guicursor = "a:ver25,a:blinkon250"
 
 -- enable mouse
 opt.mouse = "a"
 
 -- appearance
-if vim.fn.has('termguicolors') then
-  opt.termguicolors = true
-end
+if vim.fn.has('termguicolors') then opt.termguicolors = true end
 opt.background = "dark"
-opt.signcolumn = "yes"
-
 
 -- backspace
-opt.backspace = { "indent","eol","start"}
+opt.backspace = {"indent", "eol", "start"}
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
@@ -47,3 +49,5 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+-- Set completeopt to have a better completion experience
+opt.completeopt = 'menuone,noselect'

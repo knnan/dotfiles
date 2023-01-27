@@ -1,4 +1,4 @@
-/home/knnan/.config/nvim/lua/knnan/plugins|3|1674795019
+/home/knnan/.config/nvim/lua/knnan/plugins|6|1674814779
 /home/knnan/.config/session|2|1669244394
 /home/knnan/Development/work_code/PCLOUDY/pCloudyExpress/.git|1|1672232815
 /home/knnan/Development/work_code/PCLOUDY/pCloudyExpress/.git/hooks|6|1672232809
@@ -29,9 +29,9 @@
 /home/knnan/Development/work_code/FORTINET/FortiLANCloud/buildNdeploy/Release/upgrade_notes/20.1|12|1667266959
 /home/knnan/.config/zsh|11|1672571003
 /home/knnan/Development/work_code/FORTINET/FSWCloud/deploy|2|1667266625
-/home/knnan/.config/nvim/lua/knnan/core|18|1674716605
+/home/knnan/.config/nvim/lua/knnan/core|23|1674814815
 /home/knnan/.config/Code/User|3|1668330133
-/home/knnan/.config/nvim|192|1674796656
+/home/knnan/.config/nvim|225|1674814758
 /home/knnan/.config/htop|4|1666403651
 /home/knnan/Development/c-cpp-workspace|45|1674737253
 /home/knnan/Development/work_code/PCLOUDY/db_schema|4|1671970334
@@ -45,7 +45,7 @@
 /home/knnan/Development/python-workspace/lollypop|6|1671777759
 /home/knnan/Downloads|299|1674716672
 /home/knnan/Development/work_code/PCLOUDY/docker-instances/mysql8/db|4|1667839683
-/home/knnan/Development/c-cpp-workspace/c-projects/stack|18|1674739014
+/home/knnan/Development/c-cpp-workspace/c-projects/stack|21|1674814527
 /home/knnan/Downloads/downloadTest|42|1673695811
 /home/knnan/Development/web-workspace/react-tuto|2|1667933682
 /home/knnan/.config|95|1674738121
@@ -76,7 +76,7 @@
 /usr/local/bin|5|1673860048
 /usr/local/share/fonts|4|1666565662
 /home/knnan/.local/share/flatpak/db|20|1668139308
-/home/knnan/.config/nvim/lua/knnan|12|1674720076
+/home/knnan/.config/nvim/lua/knnan|19|1674814817
 /home/knnan/Development/docker-workspace|47|1674114033
 /home/knnan/.config/sublime-text|4|1666403757
 /home/knnan/Development/work_code/PCLOUDY/pCloudyExpress|1651|1674470409
@@ -132,8 +132,8 @@
 /home/knnan/Documents/oneplus7-backup|5|1672803969
 /home/knnan/Documents/knowledge-reference/programming texts|2|1674470555
 /home/knnan/.ssh/conf.d|4|1666403308
-/home/knnan/Development/go-workspace|1|1674113904
 /home/knnan/.local/share/fonts|16|1672042891
+/home/knnan/Development/go-workspace|1|1674113904
 /usr/share/fonts|26|1672380022
 /home/knnan/obsidian-vaults/yggdrasil/.trash|8|1672569858
 /home/knnan/Development/work_code/PCLOUDY/single-endpoint/redisinsight|3|1666772087
@@ -141,7 +141,7 @@
 /home/knnan/Development/work_code/PCLOUDY/temp-pcloudy-framework/Anshuman-Effect/rBox/build/private-rbox|2|1674041930
 /home/knnan/scripts/cron-scripts|39|1674641375
 /home/knnan/.config/bat/themes|2|1666403512
-/home/knnan/Development/go-workspace/go-start|66|1674794088
+/home/knnan/Development/go-workspace/go-start|68|1674799519
 /home/knnan/Development/c-cpp-workspace/c-projects/maze-game/src|2|1674278750
 /usr/lib/systemd/system-sleep|9|1674042320
 /home/knnan/Development/work_code/PCLOUDY/pCloudy-Executables-Code/Anshuman-Effect/rBox|2|1669622318
@@ -171,9 +171,9 @@
 /home/knnan/Development/python-workspace/db-schema-parser|123|1671970339
 /home/knnan/Development/work_code/PCLOUDY/pCloudy_MainCloud/DB|3|1667554866
 /usr/local/share/zsh|2|1669741690
-/home/knnan/.config/nvim/lua|26|1674737967
+/home/knnan/.config/nvim/lua|28|1674814763
 /home/knnan/Development/nodejs-workspace/knnan_api|2|1666504908
-/home/knnan/Development/c-cpp-workspace/c-reference|118|1674796426
+/home/knnan/Development/c-cpp-workspace/c-reference|119|1674799856
 /home/knnan/.config/sublime-text/Packages/User|6|1666403795
 /home/knnan/Development/work_code/PCLOUDY/testing/pCloudy-network-services|2|1667556026
 /home/knnan/Development/work_code/PCLOUDY/testing/pCloudyExpress/.git|3|1672233006
@@ -182,6 +182,7 @@
 /usr/sbin|5|1666728876
 /home/knnan/Development/work_code/PCLOUDY/temp-pcloudy-framework/Anshuman-Effect/rBox|2|1674042701
 /usr/local/share|2|1672465457
+/home/knnan/Development/interview-workspace|8|1674804586
 /home/knnan/Development/work_code/PCLOUDY/misc/openresty_testing|2|1673606913
 /home/knnan/.poshthemes|14|1666511993
 /home/knnan/Development/work_code/PCLOUDY/docker-instances/redis|86|1674616384
@@ -189,6 +190,7 @@
 /home/knnan/Development/python-workspace/python-get-started|53|1674444365
 /home/knnan/Development/work_code/PCLOUDY/progressivereport/.github|2|1672812795
 /home/knnan/Development/work_code/PCLOUDY/testing/pCloudyExpress|26|1672739853
+/home/knnan/Development/c-cpp-workspace/c-reference/src|8|1674813981
 /home/knnan/Development/work_code/PCLOUDY/temp-pcloudy-framework/Anshuman-Effect/rBox/build|12|1674042697
 /home/knnan/.var/app/org.telegram.desktop/data/TelegramDesktop|9|1673957142
 /home/knnan/.config/bat|9|1666403517
