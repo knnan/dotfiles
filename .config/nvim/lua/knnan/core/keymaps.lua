@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
-
 keymap.set("i","jj","<ESC>")
 
 -- move line up and down
@@ -37,7 +36,6 @@ keymap.set("v","<C-D>","yP gv")
 
 
 
-
 keymap.set("n","<C-Q>",":wq<CR>")
 keymap.set("i","<C-Q>","<ESC>:wq<CR>")
 keymap.set("n","<C-S>",":w<CR>")
@@ -47,7 +45,6 @@ keymap.set("n","<C-Z>","u")
 keymap.set("i","<C-Z>","<ESC>ui")
 
 keymap.set("n","<leader><leader>","i")
--- keymap.set("i","<leader><leader>","<ESC>")
 keymap.set("v","<leader><leader>","<ESC>")
 
 keymap.set("n","<c-a>","ggVG")
