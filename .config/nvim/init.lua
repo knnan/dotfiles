@@ -6,5 +6,6 @@ require("knnan.plugins.lualine")
 require("knnan.plugins.telescope")
 require("knnan.plugins.treesitter")
 require("knnan.plugins.lsp")
+require("knnan.plugins.format")
 require("knnan.plugins.misc")
 

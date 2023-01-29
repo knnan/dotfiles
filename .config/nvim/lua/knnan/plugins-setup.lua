@@ -101,6 +101,8 @@ return packer.startup(function(use)
     --         {'rafamadriz/friendly-snippets'} -- Optional
     --     }
     -- }
+    use "lukas-reineke/lsp-format.nvim"
+    use "jose-elias-alvarez/null-ls.nvim"
 
     use { -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',

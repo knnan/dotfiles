@@ -112,6 +112,7 @@ require('fidget').setup()
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
+--local nullls = require "null-ls"
 require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup {
@@ -143,7 +144,12 @@ cmp.setup {
             end
         end, {'i', 's'})
     },
-    sources = {{name = 'nvim_lsp'}, {name = 'luasnip'}}
+    sources = {
+      {name = 'nvim_lsp'},
+      {name = 'luasnip'},
+      {name = 'path'},
+      {name = 'buffer'},
+    }
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
