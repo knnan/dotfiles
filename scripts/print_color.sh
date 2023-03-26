@@ -1,6 +1,5 @@
 #!/bin/bash
 
-d
 fontstyle='01'
 message='HELLO EVERYONE'
 while getopts s:f:b:m flag

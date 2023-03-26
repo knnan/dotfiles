@@ -29,6 +29,8 @@ keymap.set("n", "<C-K>", "ddi")
 keymap.set("i", "<C-K>", "<ESC>ddi")
 keymap.set("v", "<C-K>", "di")
 
+keymap.set("v", "<C-c>", "y")
+
 keymap.set("n", "<C-D>", "yypi")
 keymap.set("i", "<C-D>", "<ESC>yypi")
 keymap.set("v", "<C-D>", "yP gv")
