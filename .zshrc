@@ -88,6 +88,7 @@ bindkey '\e[20;5~' autosuggest-accept
 
 export NVM_DIR="$HOME/.nvm"
 
+alias gitconfig="vi ~/.gitconfig"
 alias zshconfig="vi ~/.zshrc"
 alias spaceconfig="vi ~/.config/spaceship.zsh"
 alias sshconfig="vi ~/.ssh/config"
@@ -96,7 +97,8 @@ alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.lua"
 alias batconfig="vi ~/.config/bat/config"
 alias ls='exa'
-alias cat='bat'
+alias cat='bat -p'
+alias catp='bat'
 alias df='duf'
 alias hh='cd ~'
 alias reload="source ~/.zshrc"
