@@ -11,9 +11,9 @@
 [alias]
 	parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
 	sts = status
-	ch = checkout
-	chb = checkout -b
+	chk = checkout
+	chkb = checkout -b
 	ls= log --oneline
-	di = !git diff | delta --features side-by-side
+	delta = !git diff | delta --features side-by-side
 [includeIf "gitdir:~/Development/work_code/PCLOUDY/"]
 	path = ~/.gitconfig-work
