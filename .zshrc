@@ -108,8 +108,8 @@ alias xclip="xclip -selection c"
 alias -g G=" | rg"
 #alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias dc="docker compose"
-alias vpn_connect="sudo openvpn --cd ~/vpn --config client.ovpn  --auth-user-pass auth.txt"
-alias usa_vpn_connect="sudo openvpn --cd ~/vpn/usa_dc_vpn --config usa_dc_ssl_vpn_config.ovpn  --auth-user-pass usa_dc_auth.txt"
+alias vpn_connect_usa="sudo openvpn --cd ~/vpn/sify-vpn --config sify_vpn_config.ovpn  --auth-user-pass password.txt"
+alias vpn_connect_blr="sudo openvpn --cd ~/vpn/blr-vpn --config pcloudy.ovpn  --auth-user-pass password.txt"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sys-update="sudo apt update -y && sudo apt upgrade -y"
 alias shl-update="upgrade_oh_my_zsh_all"
@@ -142,6 +142,8 @@ tnt() {
   fi
 
 }
+
+
 
 ext-reload() {
   gnome-extensions disable display-switcher@iyadk.com
