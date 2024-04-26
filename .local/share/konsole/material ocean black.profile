@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=material copy
+ColorScheme=material custom black
 Font=Iosevka Term,11,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
@@ -9,14 +9,10 @@ CustomCursorColor=255,255,255
 UseCustomCursorColor=true
 
 [General]
-LocalTabTitleFormat=%d : %n
-Name=Material-Ocean
+Name=material ocean black
 Parent=FALLBACK/
 TerminalCenter=true
 TerminalMargin=14
-
-[Keyboard]
-KeyBindings=default
 
 [Terminal Features]
 BlinkingCursorEnabled=true

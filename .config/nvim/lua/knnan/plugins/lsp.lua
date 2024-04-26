@@ -1,16 +1,16 @@
--- -- Learn the keybindings, see :help lsp-zero-keybindings
--- -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
--- local lsp = require('lsp-zero')
--- lsp.preset('recommended')
---  lsp.ensure_installed({
---  	'tsserver',
---  	'eslint',
---     'sumneko_lua',
--- "gopls"
---  })
--- -- (Optional) Configure lua language server for neovim
--- lsp.nvim_workspace()
--- lsp.setup()
+-- Learn the keybindings, see :help lsp-zero-keybindings
+-- Learn to configure LSP servers, see :help lsp-zero-api-showcase
+local lsp = require('lsp-zero')
+lsp.preset('recommended')
+ lsp.ensure_installed({
+ 	'tsserver',
+ 	'eslint',
+    'lus_ls',
+	"gopls"
+ })
+-- (Optional) Configure lua language server for neovim
+lsp.nvim_workspace()
+lsp.setup()
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -73,7 +73,7 @@ local servers = {
     -- rust_analyzer = {},
     -- tsserver = {},
 
-    sumneko_lua = {
+    lua_ls = {
         Lua = {
             workspace = {checkThirdParty = false},
             telemetry = {enable = false}

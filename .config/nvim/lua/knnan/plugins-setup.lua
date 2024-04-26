@@ -4,8 +4,8 @@ local ensure_packer = function()
                              '/site/pack/packer/start/packer.nvim'
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({
-            'git', 'clone', '--depth', '1',
             'https://github.com/wbthomason/packer.nvim', install_path
+            'git', 'clone', '--depth', '1',
         })
         vim.cmd [[packadd packer.nvim]]
         return true
@@ -41,6 +41,12 @@ return packer.startup(function(use)
     -- appearance
     use {"kaicataldo/material.vim", branch = "main"}
     use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+    use {
+        "2nthony/vitesse.nvim",
+        requires = {
+            "tjdevries/colorbuddy.nvim"
+            }
+        }
     use {'kyazdani42/nvim-web-devicons'} -- icons
     use {
         'nvim-lualine/lualine.nvim',
@@ -48,8 +54,14 @@ return packer.startup(function(use)
     } -- Fancier statusline
 
     -- code editing
-    use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
-    use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
+    -- use {
+    -- 'numToStr/Comment.nvim',
+    -- config = function()
+    --     require('Comment').setup()
+    -- end
+    -- }
+    -- use 'tpope/vim-commentary'
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
     -- Fuzzy Finder (files, lsp, etc)
@@ -81,26 +93,26 @@ return packer.startup(function(use)
     }
 
     -- lsp configs
-    -- use {
-    --     'VonHeikemen/lsp-zero.nvim',
-    --     branch = 'v1.x',
-    --     requires = {
-    --         -- LSP Support
-    --         {'neovim/nvim-lspconfig'}, -- Required
-    --         {'williamboman/mason.nvim'}, -- Optional
-    --         {'williamboman/mason-lspconfig.nvim'}, -- Optional
-    --         -- Autocompletion
-    --         {'hrsh7th/nvim-cmp'}, -- Required
-    --         {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    --         {'hrsh7th/cmp-buffer'}, -- Optional
-    --         {'hrsh7th/cmp-path'}, -- Optional
-    --         {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    --         {'hrsh7th/cmp-nvim-lua'}, -- Optional
-    --         -- Snippets
-    --         {'L3MON4D3/LuaSnip'}, -- Required
-    --         {'rafamadriz/friendly-snippets'} -- Optional
-    --     }
-    -- }
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'}, -- Required
+            {'williamboman/mason.nvim'}, -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'}, -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'hrsh7th/cmp-buffer'}, -- Optional
+            {'hrsh7th/cmp-path'}, -- Optional
+            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            {'hrsh7th/cmp-nvim-lua'}, -- Optional
+            -- Snippets
+            {'L3MON4D3/LuaSnip'}, -- Required
+            {'rafamadriz/friendly-snippets'} -- Optional
+        }
+    }
     use "lukas-reineke/lsp-format.nvim"
     use "jose-elias-alvarez/null-ls.nvim"
 

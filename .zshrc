@@ -40,10 +40,14 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt histignorealldups
 setopt HIST_SAVE_NO_DUPS
+#unsetopt correct_all
+#unsetopt correct
+#DISABLE_CORRECTION="true" 
+
 SAVEHIST=999999
 HISTSIZE=1099999
 
-plugins=(zsh-nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z  copybuffer git fzf autoupdate node colored-man-pages docker-compose)
+plugins=(zsh-nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z  copybuffer git fzf autoupdate node colored-man-pages docker-compose )
 
 # FZF configuration
 alias fd="fdfind"

@@ -49,6 +49,10 @@ keymap.set("v", "<leader><leader>", "<ESC>")
 keymap.set("n", "<c-a>", "ggVG")
 keymap.set("i", "<c-a>", "<ESC>ggVG")
 
+
+keymap.set("n", "<C-_>", ":Commentary<CR>")
+keymap.set("i", "<C-_>", ":Commentary<CR>i")
+keymap.set("v", "<C-_>", ":Commentary<CR>")
+
+
 keymap.set("n", "<leader>ff", ":lua vim.lsp.buf.format {async = true}<CR>")
-
-

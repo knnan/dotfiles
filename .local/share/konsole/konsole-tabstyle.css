@@ -9,6 +9,7 @@ QTabWidget::tab-bar {
 
 QTabBar::tab {
   padding:5px;
+  color: #1c4642;
   background-color: #090a10;
   font-family: Iosevka;
   font-size: 13px;

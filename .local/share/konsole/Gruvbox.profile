@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=material copy
-Font=Iosevka Term,11,-1,5,50,0,0,0,0,0
+ColorScheme=Gruvbox Material Hard Dark
+Font=Iosevka Term,10,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]
@@ -9,14 +9,10 @@ CustomCursorColor=255,255,255
 UseCustomCursorColor=true
 
 [General]
-LocalTabTitleFormat=%d : %n
-Name=Material-Ocean
+Name=Gruvbox
 Parent=FALLBACK/
 TerminalCenter=true
 TerminalMargin=14
-
-[Keyboard]
-KeyBindings=default
 
 [Terminal Features]
 BlinkingCursorEnabled=true
