@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = ' '
+vim.g.maplocalleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
@@ -51,8 +51,14 @@ keymap.set("i", "<c-a>", "<ESC>ggVG")
 
 
 keymap.set("n", "<C-_>", ":Commentary<CR>")
-keymap.set("i", "<C-_>", ":Commentary<CR>i")
+keymap.set("i", "<C-_>", "<ESC>:Commentary<CR>i")
 keymap.set("v", "<C-_>", ":Commentary<CR>")
 
+
+keymap.set("n","<C-W>",":bdelete<CR>")
+keymap.set("n","<TAB>",":bnext<CR>")
+keymap.set("n","<S-TAB>",":bprevious<CR>")
+
+keymap.set("n","<a-e>",":NvimTreeToggle<CR>")
 
 keymap.set("n", "<leader>ff", ":lua vim.lsp.buf.format {async = true}<CR>")

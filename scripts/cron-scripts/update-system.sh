@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#
 
 system_update() {
         sudo apt-get update -y -qq 1> /dev/null

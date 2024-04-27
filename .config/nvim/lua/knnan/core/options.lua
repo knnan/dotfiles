@@ -51,3 +51,5 @@ opt.iskeyword:append("-")
 
 -- Set completeopt to have a better completion experience
 opt.completeopt = 'menuone,noselect'
+vim.lsp.set_log_level "debug"
+

@@ -1,11 +1,17 @@
 [Background]
 Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundFaint]
 Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundIntense]
 Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [Color0]
 Color=59,66,82
@@ -81,16 +87,22 @@ Color=180,142,173
 
 [Foreground]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundFaint]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundIntense]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [General]
 Blur=true
-ColorRandomization=false
+ColorRandomization=true
 Description=material custom black
-Opacity=1
+Opacity=0.85
 Wallpaper=

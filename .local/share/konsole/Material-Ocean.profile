@@ -1,6 +1,8 @@
 [Appearance]
+BoldIntense=true
 ColorScheme=material copy
 Font=Iosevka Term,11,-1,5,50,0,0,0,0,0
+LineSpacing=0
 UseFontLineChararacters=true
 
 [Cursor Options]
@@ -9,6 +11,7 @@ CustomCursorColor=255,255,255
 UseCustomCursorColor=true
 
 [General]
+DimWhenInactive=false
 LocalTabTitleFormat=%d : %n
 Name=Material-Ocean
 Parent=FALLBACK/

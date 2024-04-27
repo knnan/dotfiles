@@ -5,8 +5,8 @@ lsp.preset('recommended')
  lsp.ensure_installed({
  	'tsserver',
  	'eslint',
-    'lus_ls',
-	"gopls"
+  'lus_ls',
+	'gopls'
  })
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
@@ -42,7 +42,7 @@ local on_attach = function(_, bufnr)
 
     -- See `:help K` for why this keymap
     nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-    nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+    -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
     -- Lesser used LSP functionality
     nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')

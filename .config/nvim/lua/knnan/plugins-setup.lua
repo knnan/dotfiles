@@ -55,13 +55,7 @@ return packer.startup(function(use)
 
     -- code editing
    use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
-    -- use {
-    -- 'numToStr/Comment.nvim',
-    -- config = function()
-    --     require('Comment').setup()
-    -- end
-    -- }
-    -- use 'tpope/vim-commentary'
+    use 'tpope/vim-commentary'
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
     -- Fuzzy Finder (files, lsp, etc)
@@ -138,6 +132,15 @@ return packer.startup(function(use)
 
         }
     }
+    -- File Explorer
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        }
+        }
+        -- for tabs
+use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -14,6 +14,6 @@
 	ch = checkout
 	chb = checkout -b
 	ls= log --oneline -n 10
-	delta = !git diff | delta --features side-by-side
+	dlt = !git diff | delta --features side-by-side
 [includeIf "gitdir:~/Development/work_code/PCLOUDY/"]
 	path = ~/.gitconfig-work
