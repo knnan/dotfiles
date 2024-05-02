@@ -101,6 +101,7 @@ alias sshconfig-work="vi ~/.ssh/conf.d/config.work"
 alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.lua"
 alias batconfig="vi ~/.config/bat/config"
+alias cd='z'
 alias ls='exa -a'
 alias lsd='exa -D'
 alias ll='exa -las size'
