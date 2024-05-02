@@ -7,7 +7,7 @@ end
 
 require("vitesse").setup {
   comment_italics = true,
-  transparent_background = false,
+  transparent_background = true,
   transparent_float_background = true, -- aka pum(popup menu) background
   reverse_visual = false,
   dim_nc = false,

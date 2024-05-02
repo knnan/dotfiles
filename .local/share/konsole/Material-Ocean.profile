@@ -1,7 +1,8 @@
 [Appearance]
+AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=material copy
-Font=Iosevka Term,11,-1,5,50,0,0,0,0,0
+Font=Iosevka Term,12,-1,5,50,0,0,0,0,0
 LineSpacing=0
 UseFontLineChararacters=true
 

@@ -8,7 +8,7 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=material ocean black.profile,Nee Green Light.profile,solarized light.profile,Neen Green.profile,Gruvbox.profile,Material-Ocean.profile
+Favorites=Gruvbox.profile,solarized light.profile,Neen Green.profile,Material-Ocean.profile,material ocean black.profile,Nee Green Light.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
@@ -16,13 +16,11 @@ ShowMenuBarByDefault=false
 [MainWindow]
 Height 1080=489
 Height 900=617
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABkAAAANDAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAAyAAAAJTAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1200
+Width 1600=800
 Width 1920=960
 Window-Maximized 1080x1920=true
-Window-Maximized 900x1600=true
 
 [Shortcut Schemes]
 Current Scheme=Default

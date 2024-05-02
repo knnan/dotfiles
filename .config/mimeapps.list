@@ -8,6 +8,7 @@ text/markdown=code.desktop;
 x-scheme-handler/sms=org.gnome.Shell.Extensions.ZorinConnect.desktop;
 x-scheme-handler/tel=org.gnome.Shell.Extensions.ZorinConnect.desktop;
 audio/x-vorbis+ogg=org.gnome.Totem.desktop;com.github.neithern.g4music.desktop;spek.desktop;
+video/mp4=vlc.desktop;
 
 [Default Applications]
 text/html=obsidian.desktop

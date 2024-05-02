@@ -35,16 +35,14 @@ keymap.set("n", "<C-D>", "yypi")
 keymap.set("i", "<C-D>", "<ESC>yypi")
 keymap.set("v", "<C-D>", "yP gv")
 
-keymap.set("n", "<C-Q>", ":wq<CR>")
-keymap.set("i", "<C-Q>", "<ESC>:wq<CR>")
+keymap.set("n", "<C-Q>", ":q<CR>")
+keymap.set("i", "<C-Q>", "<ESC>:q<CR>")
 keymap.set("n", "<C-S>", ":w<CR>")
 keymap.set("i", "<C-S>", "<ESC>:w<CR>")
 
 keymap.set("n", "<C-Z>", "u")
 keymap.set("i", "<C-Z>", "<ESC>ui")
 
-keymap.set("n", "<leader><leader>", "i")
-keymap.set("v", "<leader><leader>", "<ESC>")
 
 keymap.set("n", "<c-a>", "ggVG")
 keymap.set("i", "<c-a>", "<ESC>ggVG")

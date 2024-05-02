@@ -1,12 +1,35 @@
 local builtin = require('telescope.builtin')
-require('telescope.builtin').buffers({  ignore_current_buffer = true })
+local actions = require('telescope.actions')
 
 require("telescope").setup {
+    pickers = {
+        buffers = {
+            ignore_current_buffer=true,
+            show_all_buffers = true,
+            sort_lastused = true,
+            theme = "dropdown",
+            previewer = false,
+            mappings = {
+                i = {
+                    ["<c-d>"] = "delete_buffer",
+                },
+                n = {
+                    ["<c-d>"] = "delete_buffer",
+                }
+            }
+        }
+    },
     defaults = {
+        mappings = {
+            i = {
+                ["<esc>"] = actions.close,
+            },
+            n = {},
+        },
         -- layout_strategy = "cursor"
         -- layout_strategy = "center"
-        -- layout_strategy = "vertical"
-        layout_strategy = "horizontal"
+        layout_strategy = "vertical"
+        -- layout_strategy = "horizontal"
     }
 }
 
