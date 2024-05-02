@@ -1,5 +1,5 @@
 local ensure_packer = function()
-                        local fn = vim.fn
+    local fn = vim.fn
     local install_path = fn.stdpath('data') ..
         '/site/pack/packer/start/packer.nvim'
     if fn.empty(fn.glob(install_path)) > 0 then
@@ -40,7 +40,7 @@ return packer.startup(function(use)
 
     -- appearance
     use 'navarasu/onedark.nvim' -- Theme inspired by Atom
-    use 'marko-cerovac/material.nvim' -- Better material theme 
+    use 'marko-cerovac/material.nvim' -- Better material theme
     -- use { "kaicataldo/material.vim", branch = "main" }
     use {
         "2nthony/vitesse.nvim",

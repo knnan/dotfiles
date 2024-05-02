@@ -1,7 +1,7 @@
 -- VITESSE THEME
 require("vitesse").setup {
   comment_italics = true,
-  transparent_background = true,
+  transparent_background = false,
   transparent_float_background = true, -- aka pum(popup menu) background
   reverse_visual = false,
   dim_nc = false,
@@ -26,6 +26,7 @@ require("vitesse").setup {
 -- MATERIAL THEME
 require('material').setup({
   disable = {
+    sidebars = true,
     colored_cursor = true
   },
   custom_colors = function(colors)
@@ -38,5 +39,5 @@ vim.g.material_style = "deep ocean"
 
 
 -- vim.cmd.colorscheme("onedark")
-vim.cmd.colorscheme("material")
 vim.cmd.colorscheme("vitesse")
+vim.cmd.colorscheme("material")

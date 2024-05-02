@@ -8,7 +8,7 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=solarized light.profile,Material-Ocean.profile,material ocean black.profile,Neen Green.profile,Nee Green Light.profile,Gruvbox.profile
+Favorites=solarized light.profile,Material-Ocean.profile,Gruvbox.profile,Nee Green Light.profile,material ocean black.profile,Neen Green.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
