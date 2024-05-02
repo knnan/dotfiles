@@ -159,10 +159,10 @@ _G.packer_plugins = {
     path = "/home/knnan/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["material.vim"] = {
+  ["material.nvim"] = {
     loaded = true,
-    path = "/home/knnan/.local/share/nvim/site/pack/packer/start/material.vim",
-    url = "https://github.com/kaicataldo/material.vim"
+    path = "/home/knnan/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["neodev.nvim"] = {
     loaded = true,

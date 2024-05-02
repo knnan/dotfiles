@@ -1,10 +1,4 @@
-vim.g.material_theme_style = "ocean"
-local status, _ = pcall(vim.cmd, "colorscheme material")
-if not status then
-    print("colorscheme not found!")
-    return
-end
-
+-- VITESSE THEME
 require("vitesse").setup {
   comment_italics = true,
   transparent_background = true,
@@ -20,7 +14,8 @@ require("vitesse").setup {
   diagnostic_virtual_text_background = false,
 
   -- override the `lua/vitesse/palette.lua`, go to file see fields
-  colors = {},
+  colors = {
+  },
   themes = {
   background = '#000000',
   -- border = "#000000"
@@ -28,6 +23,20 @@ require("vitesse").setup {
   },
 }
 
+-- MATERIAL THEME
+require('material').setup({
+  disable = {
+    colored_cursor = true
+  },
+  custom_colors = function(colors)
+        colors.editor.bg = "#090a10"
+    end
+
+})
+vim.g.material_style = "deep ocean"
+
+
+
 -- vim.cmd.colorscheme("onedark")
--- vim.cmd.colorscheme("vitesse")
 vim.cmd.colorscheme("material")
+vim.cmd.colorscheme("vitesse")

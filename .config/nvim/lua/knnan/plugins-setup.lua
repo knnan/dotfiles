@@ -1,7 +1,7 @@
 local ensure_packer = function()
-    local fn = vim.fn
+                        local fn = vim.fn
     local install_path = fn.stdpath('data') ..
-                             '/site/pack/packer/start/packer.nvim'
+        '/site/pack/packer/start/packer.nvim'
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({
             'https://github.com/wbthomason/packer.nvim', install_path
@@ -19,7 +19,7 @@ local packer_bootstrap = ensure_packer()
 -- Autocommand to run :PackerCompile whenever plugins.lua gets updated with a autocommand
 -- Autoocommand that reloads neovim whenever you save this file
 vim.cmd([[ 
-  augroup packer_user_config
+    augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
   augroup end
@@ -30,7 +30,7 @@ local status, packer = pcall(require, "packer")
 if not status then return end
 
 return packer.startup(function(use)
-    -- Packer Manager              
+    -- Packer Manager
     use 'wbthomason/packer.nvim'
 
     -- Git related plugins
@@ -39,22 +39,24 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- appearance
-    use {"kaicataldo/material.vim", branch = "main"}
     use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+    use 'marko-cerovac/material.nvim' -- Better material theme 
+    -- use { "kaicataldo/material.vim", branch = "main" }
     use {
         "2nthony/vitesse.nvim",
         requires = {
             "tjdevries/colorbuddy.nvim"
-            }
         }
-    use {'kyazdani42/nvim-web-devicons'} -- icons
+    }
+
+    use { 'kyazdani42/nvim-web-devicons' } -- icons
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     } -- Fancier statusline
 
     -- code editing
-   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
+    use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
     use 'tpope/vim-commentary'
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
@@ -62,7 +64,7 @@ return packer.startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
-        requires = {'nvim-lua/plenary.nvim'}
+        requires = { 'nvim-lua/plenary.nvim' }
     }
 
     -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
@@ -77,7 +79,7 @@ return packer.startup(function(use)
     use { -- Highlight, edit, and navigate code
         'nvim-treesitter/nvim-treesitter',
         run = function()
-            pcall(require('nvim-treesitter.install').update {with_sync = true})
+            pcall(require('nvim-treesitter.install').update { with_sync = true })
         end
     }
 
@@ -92,19 +94,19 @@ return packer.startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'}, -- Required
-            {'williamboman/mason.nvim'}, -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            { 'williamboman/mason.nvim' }, -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'}, -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'hrsh7th/cmp-buffer'}, -- Optional
-            {'hrsh7th/cmp-path'}, -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'}, -- Optional
+            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'hrsh7th/cmp-buffer' }, -- Optional
+            { 'hrsh7th/cmp-path' }, -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
             -- Snippets
-            {'L3MON4D3/LuaSnip'}, -- Required
-            {'rafamadriz/friendly-snippets'} -- Optional
+            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'rafamadriz/friendly-snippets' } -- Optional
         }
     }
     use "lukas-reineke/lsp-format.nvim"
@@ -138,9 +140,9 @@ return packer.startup(function(use)
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         }
-        }
-        -- for tabs
-use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+    }
+    -- for tabs
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

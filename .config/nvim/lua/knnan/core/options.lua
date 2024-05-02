@@ -30,6 +30,7 @@ opt.cursorline = true
 -- cursor shape and blink
 opt.guicursor = "a:ver25-blinkon250"
 
+
 -- enable mouse
 opt.mouse = "a"
 

@@ -1,7 +1,7 @@
 require("knnan.plugins-setup")
-require("knnan.core.options")
 require("knnan.core.keymaps")
 require("knnan.core.colorscheme")
+require("knnan.core.options")
 require("knnan.core.misc_pref")
 require("knnan.plugins.lualine")
 require("knnan.plugins.bufferline")

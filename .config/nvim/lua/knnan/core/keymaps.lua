@@ -40,10 +40,17 @@ keymap.set("i", "<C-Q>", "<ESC>:q<CR>")
 keymap.set("n", "<C-S>", ":w<CR>")
 keymap.set("i", "<C-S>", "<ESC>:w<CR>")
 
+-- undo 
 keymap.set("n", "<C-Z>", "u")
 keymap.set("i", "<C-Z>", "<ESC>ui")
 
+keymap.set("n", "<C-I>", "o")
+keymap.set("i", "<C-I>", "<ESC>o")
 
+
+
+
+-- select entire file
 keymap.set("n", "<c-a>", "ggVG")
 keymap.set("i", "<c-a>", "<ESC>ggVG")
 
@@ -59,4 +66,5 @@ keymap.set("n","<S-TAB>",":bprevious<CR>")
 
 keymap.set("n","<a-e>",":NvimTreeToggle<CR>")
 
-keymap.set("n", "<leader>ff", ":lua vim.lsp.buf.format {async = true}<CR>")
+keymap.set("n", "<C-R>", ":lua vim.lsp.buf.format {async = true}<CR>")
+keymap.set("i", "<C-R>", "<ESC>:lua vim.lsp.buf.format {async = true}<CR>i")
