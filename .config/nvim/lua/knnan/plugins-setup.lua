@@ -134,6 +134,11 @@ return packer.startup(function(use)
 
         }
     }
+
+
+    use {
+    "windwp/nvim-autopairs",
+}
     -- File Explorer
     use {
         'nvim-tree/nvim-tree.lua',

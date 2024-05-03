@@ -9,6 +9,9 @@ require("telescope").setup {
             theme = "dropdown",
             previewer = false
         },
+        current_buffer_fuzzy_find = {
+            previewer = true
+        },
         buffers = {
             ignore_current_buffer = true,
             show_all_buffers = true,
@@ -70,3 +73,9 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>sn', function()
     builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
+vim.keymap.set('n', '<leader>sc', function()
+    builtin.find_files {
+        find_command = { 'rg', '--files', '--hidden', '-g', '{.*/**/*,.*}', '-g',
+            '!{.git,node_modules,.cache,.vscode,.var,.ansible,.eclipse,.npm,.nvm,.mozilla,.java,.codeintel,.dotnet,.pki,.anydesk,.docker,.gnome,.rest-client,.rpmdb,.swt,.gnupg,.android,.poshthemes,.grsync,.pm2}' }
+    }
+end, { desc = '[S]earch [C]onfig files' })
