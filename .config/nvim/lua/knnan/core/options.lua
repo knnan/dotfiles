@@ -28,7 +28,7 @@ opt.signcolumn = 'yes'
 opt.cursorline = true
 
 -- cursor shape and blink
-opt.guicursor = "a:ver25-blinkon250"
+opt.guicursor = "a:ver25-blinkon250,n-v-c:ver25-blinkon250"
 
 
 -- enable mouse
@@ -44,13 +44,20 @@ opt.backspace = {"indent", "eol", "start"}
 -- clipboard
 opt.clipboard:append("unnamedplus")
 
+-- disbale comment newline continuation
+opt.formatoptions:remove({'c', 'r', 'o' })
+
+
 -- split windows
 opt.splitright = true
-opt.splitbelow = true
+opt.splitbelow = false
 
 opt.iskeyword:append("-")
 
+-- disable swapfile
+opt.swapfile = false
 -- Set completeopt to have a better completion experience
 opt.completeopt = 'menuone,noselect'
 vim.lsp.set_log_level "debug"
-
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
