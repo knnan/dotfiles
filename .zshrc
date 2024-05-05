@@ -64,6 +64,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
 -m
 --layout=reverse
+--preview="echo {}"
+--preview-window=right:40%:hidden:wrap
+--bind=ctrl-/:toggle-preview
 '
 
 
@@ -199,7 +202,9 @@ timezsh() {
 vif() {
   nvim $(fzf)
 }
-
+ii(){
+  nvim $(fzf)
+}
 cd_with_fzf() {
   cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD" && tree -L 1 --dirsfirst
 }

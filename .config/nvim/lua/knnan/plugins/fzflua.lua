@@ -2,10 +2,11 @@ require('fzf-lua').setup(
   {
     'telescope',
     winopts = {
-      height = 0.55, width = 0.33
+      height = 0.55, width = 0.40
     },
     files = {
-      previewer = false
+      previewer = false,
+      file_icons = false,
     },
     buffers = {
       winopts = {

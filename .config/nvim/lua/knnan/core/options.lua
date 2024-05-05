@@ -13,7 +13,7 @@ opt.smartindent = true
 opt.breakindent = true -- enable break indent
 
 -- line wrapping
-opt.wrap = true
+opt.wrap = false
 
 -- search settings
 opt.ignorecase = true
@@ -28,7 +28,7 @@ opt.signcolumn = 'yes'
 opt.cursorline = true
 
 -- cursor shape and blink
-opt.guicursor = "a:ver25-blinkon250,n-v-c:ver25-blinkon250"
+opt.guicursor = "a:ver25-blinkon250,n-v-c-i:ver25-blinkon250"
 
 
 -- enable mouse
