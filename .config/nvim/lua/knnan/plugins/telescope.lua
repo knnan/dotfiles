@@ -9,6 +9,14 @@ require("telescope").setup {
             theme = "dropdown",
             previewer = false
         },
+        help_tags = {
+
+            mappings = {
+                i = {
+                    ["<CR>"] = "file_vsplit",
+                },
+            }
+        },
         buffers = {
             ignore_current_buffer = true,
             show_all_buffers = true,

@@ -31,6 +31,10 @@ export HISTORY_IGNORE="google*"
 export NVM_LAZY_LOAD=false
 export NVM_COMPLETION=true
 
+
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_SPACE
@@ -40,9 +44,6 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt histignorealldups
 setopt HIST_SAVE_NO_DUPS
-#unsetopt correct_all
-#unsetopt correct
-#DISABLE_CORRECTION="true" 
 
 SAVEHIST=999999
 HISTSIZE=1099999
@@ -53,22 +54,24 @@ plugins=(zsh-nvm zsh-autosuggestions zsh-syntax-highlighting copybuffer git fzf 
 alias fd="fdfind"
 
 # Setting rg as the default source for fzf
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-
-# Options to fzf command
-export FZF_COMPLETION_OPTS='+c -x'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/
+*" 2> /dev/null'
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=dark
---color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
---color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
--m
+--scheme=path
+--multi
+--border
 --layout=reverse
 --preview="echo {}"
 --preview-window=right:40%:hidden:wrap
 --bind=ctrl-/:toggle-preview
 '
 
+# Colorscheme for fzf
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#d0d0d0,bg:#000000,hl:#04d462 --color=fg+:#d0d0d0,bg+:#0e0e0f,hl+:#22e3c6 --color=info:#afaf87,prompt:#d7005f,pointer:#af5fff --color=marker:#87ff00,spinner:#af5fff,header:#87afaf'
+
+# Completion options  to fzf command
+export FZF_COMPLETION_OPTS='+c -x'
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
@@ -108,6 +111,7 @@ alias ls='exa -a'
 alias lsd='exa -D'
 alias ll='exa -las size'
 alias lst="exa --tree"
+#alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias cat='bat'
 alias catp='bat -p'
 alias df='duf'
@@ -116,13 +120,12 @@ alias reload="source ~/.zshrc"
 alias python=python3.9
 alias xclip="xclip -selection c"
 alias -g G=" | rg"
-#alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
-alias dc="docker compose"
-alias vpn_connect_usa="sudo openvpn --cd ~/vpn/sify-vpn --config sify_vpn_config.ovpn  --auth-user-pass password.txt"
-alias vpn_connect_blr="sudo openvpn --cd ~/vpn/blr-vpn --config pcloudy.ovpn  --auth-user-pass password.txt"
+alias vpn="sudo openvpn --cd ~/vpn/blr-vpn --config pcloudy.ovpn  --auth-user-pass password.txt"
+alias vpn_sify="sudo openvpn --cd ~/vpn/sify-vpn --config sify_vpn_config.ovpn  --auth-user-pass password.txt"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sys-update="sudo apt update -y && sudo apt upgrade -y"
 alias shl-update="upgrade_oh_my_zsh_all"
+alias dc="docker compose"
 alias dd="dev-dockers"
 alias ansp="ansible-playbook"
 
@@ -140,17 +143,6 @@ docker-service() {
   sudo systemctl $1 containerd.service
   sudo systemctl $1 docker.socket
   sudo systemctl $1 docker.service
-}
-
-tnt() {
-  if [ $# -eq 0 ]; then
-    vi ~/.tmp-note
-  elif [ $1 = c ]; then
-    echo "" >~/.tmp-note
-  elif [ $1 = e ]; then
-    bash ~/.tmp-note
-  fi
-
 }
 
 
@@ -179,13 +171,6 @@ system-update() {
   sudo apt autoclean -y
 }
 
-tl() {
-  if [ $# -eq 0 ]; then
-    tree -L 1
-  else
-    tree -L $1 | less
-  fi
-}
 
 kk() {
   if [ $# -eq 0 ]; then
@@ -205,9 +190,7 @@ vif() {
 ii(){
   nvim $(fzf)
 }
-cd_with_fzf() {
-  cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD" && tree -L 1 --dirsfirst
-}
+
 
 clip() {
   cat $1 | xclip -selection c
@@ -232,9 +215,6 @@ help() {
   fi
 }
 
-# keybindings
-# zle -N cd_with_fzf
-# bindkey '^' cd_with_fzf
 
 
 ORIGINAL_LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
@@ -251,3 +231,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 export PATH=$PATH
 
 
+
+# Generated for envman. Do not edit.
+# [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
