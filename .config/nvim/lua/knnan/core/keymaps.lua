@@ -71,7 +71,10 @@ keymap.set("i", "<C-R>", "<ESC>:lua vim.lsp.buf.format {async = true}<CR>i")
 
 
 
-keymap.set("n","<C-p>","<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
-keymap.set("i","<C-p>","<ESC><cmd>lua require('fzf-lua').files()<CR>", { silent = true })
+-- keymap.set("n","<C-p>",":Files<CR>")
+-- keymap.set("i","<C-p>","<Esc>:Files<CR>")
+
+-- keymap.set("n","<C-p>","<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
+-- keymap.set("i","<C-p>","<ESC><cmd>lua require('fzf-lua').files()<CR>", { silent = true })
 keymap.set("n","<C-o>","<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
 keymap.set("i","<C-o>","<ESC><cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })

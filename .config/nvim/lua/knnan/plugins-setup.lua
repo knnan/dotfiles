@@ -39,6 +39,7 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- appearance
+    use { "catppuccin/nvim", as = "catppuccin" }
     use 'navarasu/onedark.nvim' -- Theme inspired by Atom
     use 'marko-cerovac/material.nvim' -- Better material theme
     -- use { "kaicataldo/material.vim", branch = "main" }
@@ -61,16 +62,16 @@ return packer.startup(function(use)
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
 
-    -- fuzzy find original 
+    -- fuzzy find original
     use {
-    'junegunn/fzf.vim',
-    requires = { 'junegunn/fzf', run = ':call fzf#install()' }
- }
+        'junegunn/fzf.vim',
+        requires = { 'junegunn/fzf', run = ':call fzf#install()' }
+    }
 
- use { "ibhagwan/fzf-lua",
-  -- optional for icon support
-  requires = { "nvim-tree/nvim-web-devicons" }
-}
+    use { "ibhagwan/fzf-lua",
+        -- optional for icon support
+        requires = { "nvim-tree/nvim-web-devicons" }
+    }
     -- Fuzzy Finder (files, lsp, etc)
     use {
         'nvim-telescope/telescope.nvim',
@@ -148,8 +149,8 @@ return packer.startup(function(use)
 
 
     use {
-    "windwp/nvim-autopairs",
-}
+        "windwp/nvim-autopairs",
+    }
     -- File Explorer
     use {
         'nvim-tree/nvim-tree.lua',

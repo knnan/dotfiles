@@ -67,9 +67,16 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --bind=ctrl-/:toggle-preview
 '
 
-# Colorscheme for fzf
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#d0d0d0,bg:#000000,hl:#04d462 --color=fg+:#d0d0d0,bg+:#0e0e0f,hl+:#22e3c6 --color=info:#afaf87,prompt:#d7005f,pointer:#af5fff --color=marker:#87ff00,spinner:#af5fff,header:#87afaf'
+export FZF_CTRL_T_OPTS=$FZF_CTRL_T_OPTS'
+--preview="bat --style=numbers --color=always --line-range :500 {}"
+'
 
+# fzf theme options
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#676767,fg+:#d0d0d0,bg:-1,bg+:#262626
+  --color=hl:#04d462,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
+  --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9'
 # Completion options  to fzf command
 export FZF_COMPLETION_OPTS='+c -x'
 
@@ -88,6 +95,8 @@ _fzf_compgen_dir() {
 
 FZF_CTRL_T_COMMAND='fdfind --hidden --follow --exclude ".git" --exclude "node_modules" .'
 FZF_CTRL_K_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude "node_modules" . ~'
+FZF_ALT_C_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude "node_modules" . ~'
+
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/key-bindings.zsh
@@ -120,8 +129,8 @@ alias reload="source ~/.zshrc"
 alias python=python3.9
 alias xclip="xclip -selection c"
 alias -g G=" | rg"
-alias vpn="sudo openvpn --cd ~/vpn/blr-vpn --config pcloudy.ovpn  --auth-user-pass password.txt"
-alias vpn_sify="sudo openvpn --cd ~/vpn/sify-vpn --config sify_vpn_config.ovpn  --auth-user-pass password.txt"
+alias vpn_connect="sudo openvpn --cd ~/vpn/blr-vpn --config pcloudy.ovpn  --auth-user-pass password.txt"
+alias vpn_connect_usa="sudo openvpn --cd ~/vpn/sify-vpn --config sify_vpn_config.ovpn  --auth-user-pass password.txt"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sys-update="sudo apt update -y && sudo apt upgrade -y"
 alias shl-update="upgrade_oh_my_zsh_all"
@@ -165,10 +174,10 @@ remove-pkg() {
   sudo apt autoclean -y && sudo apt autoremove -y
 }
 system-update() {
-  sudo apt update -y
-  sudo apt upgrade -y
-  sudo apt autoremove -y
-  sudo apt autoclean -y
+  sudo apt update -y || echo "some issue"
+  sudo apt upgrade -y || echo "some issue"
+  sudo apt autoremove -y || echo "some Issue"
+  sudo apt autoclean -y || echo "some issue"
 }
 
 

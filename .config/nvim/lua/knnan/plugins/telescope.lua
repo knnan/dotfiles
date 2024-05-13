@@ -66,7 +66,7 @@ require("telescope").setup {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
--- vim.keymap.set('n', '<C-P>', builtin.find_files, {})
+vim.keymap.set('n', '<C-P>', builtin.find_files, {})
 vim.keymap.set('n', '<C-F>', builtin.current_buffer_fuzzy_find, {
 
 })
