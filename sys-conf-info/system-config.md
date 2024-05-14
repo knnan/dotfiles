@@ -21,6 +21,7 @@ vscode
 powerline fonts
 spaceship theme
 batcat
+exa or its alternative
 ripgrep
 ranger
 fdfind
@@ -29,6 +30,7 @@ vlc
 indicator-stickynotes
 Bitwarden
 spotify
+ncdu
 
 1. git , curl , wget ,zsh
 
