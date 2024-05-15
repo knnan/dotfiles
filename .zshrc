@@ -62,6 +62,7 @@ alias fd="fdfind"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/
 *" 2> /dev/null'
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--bind tab:down,shift-tab:up
 --scheme=path
 --multi
 --border
@@ -72,6 +73,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 export FZF_CTRL_T_OPTS=$FZF_CTRL_T_OPTS'
 --preview="bat --style=numbers --color=always --line-range :500 {}"
+'
+export FZF_CTRL_T_OPTS=$FZF_CTRL_T_OPTS'
+--scheme=history
 '
 
 # fzf theme options
@@ -112,6 +116,7 @@ bindkey '\e[20;5~' autosuggest-accept # set the terminal escape sequence for thi
 
 alias gitconfig="vi ~/.gitconfig"
 alias zshconfig="vi ~/.zshrc"
+alias zshhistory="vi ~/.zsh_history"
 alias spaceconfig="vi ~/.config/spaceship.zsh"
 alias sshconfig="vi ~/.ssh/config"
 alias sshconfig-work="vi ~/.ssh/conf.d/config.work"

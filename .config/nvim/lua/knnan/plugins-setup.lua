@@ -62,16 +62,12 @@ return packer.startup(function(use)
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
 
-    -- fuzzy find original
+    -- fuzzy finder  original
     use {
         'junegunn/fzf.vim',
         requires = { 'junegunn/fzf', run = ':call fzf#install()' }
     }
 
-    use { "ibhagwan/fzf-lua",
-        -- optional for icon support
-        requires = { "nvim-tree/nvim-web-devicons" }
-    }
     -- Fuzzy Finder (files, lsp, etc)
     use {
         'nvim-telescope/telescope.nvim',

@@ -9,6 +9,12 @@ require("telescope").setup {
             theme = "dropdown",
             previewer = false
         },
+        current_buffer_fuzzy_find = {
+            layout_strategy = "horizontal",
+            layout_config = {
+                prompt_position = "top"
+            }
+        },
         help_tags = {
 
             mappings = {
@@ -34,6 +40,8 @@ require("telescope").setup {
         }
     },
     defaults = {
+        sorting_strategy = "ascending",
+        wrap_results = true,
         file_ignore_patterns = {
             ".git/",
             ".cache",
@@ -44,6 +52,7 @@ require("telescope").setup {
             "%.pdf",
             "%.mkv",
             "%.mp4",
+            "%.png",
             "%.jpg",
             "%.jpeg",
             "%mp3",
@@ -72,7 +81,7 @@ vim.keymap.set('n', '<C-F>', builtin.current_buffer_fuzzy_find, {
 })
 vim.keymap.set('n', '<a-p>', builtin.commands, {})
 vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
--- vim.keymap.set('n', '<C-O>', builtin.buffers, {})
+vim.keymap.set('n', '<C-O>', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- Shortcut for searching your Neovim configuration files
 vim.keymap.set('n', '<leader>sn', function()

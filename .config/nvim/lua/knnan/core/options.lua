@@ -13,7 +13,8 @@ opt.smartindent = true
 opt.breakindent = true -- enable break indent
 
 -- line wrapping
-opt.wrap = false
+opt.textwidth = 80
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true
@@ -39,13 +40,13 @@ if vim.fn.has('termguicolors') then opt.termguicolors = true end
 opt.background = "dark"
 
 -- backspace
-opt.backspace = {"indent", "eol", "start"}
+opt.backspace = { "indent", "eol", "start" }
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
 
 -- disbale comment newline continuation
-opt.formatoptions:remove({'c', 'r', 'o' })
+opt.formatoptions:remove({ 'c', 'r', 'o' })
 
 
 -- split windows
