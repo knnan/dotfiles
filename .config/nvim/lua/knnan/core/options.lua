@@ -13,8 +13,7 @@ opt.smartindent = true
 opt.breakindent = true -- enable break indent
 
 -- line wrapping
-opt.textwidth = 80
-opt.wrap = true
+opt.wrap = false
 
 -- search settings
 opt.ignorecase = true

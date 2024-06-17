@@ -1,0 +1,1 @@
+SELECT km.migration_time ,km.migration_time AT time ZONE 'utc' FROM knex_migrations km 

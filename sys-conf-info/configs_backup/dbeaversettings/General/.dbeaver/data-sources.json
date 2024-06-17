@@ -1,0 +1,197 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-1843e13e15d-4e2da64cc379b1cc": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "node-stg",
+			"save-password": true,
+			"show-system-objects": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "pcloud",
+				"url": "jdbc:mysql://localhost:3306/pcloud",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2",
+					"allowPublicKeyRetrieval": "true"
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "172.24.70.15",
+							"port": 22.0,
+							"authType": "PASSWORD",
+							"jumpServer0.host": "10.10.60.150",
+							"jumpServer0.port": 22.0,
+							"jumpServer0.authType": "PASSWORD",
+							"jumpServer0.name": "radmin",
+							"jumpServer0.enabled": true,
+							"implementation": "sshj",
+							"localHost": "",
+							"remoteHost": ""
+						}
+					}
+				}
+			}
+		},
+		"mysql8-18441f16b3a-cbc5d27e67c7625": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "local-mysql8-docker(development)",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "sampledatabase",
+				"url": "jdbc:mysql://localhost:3306/sampledatabase",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2",
+					"allowPublicKeyRetrieval": "true"
+				},
+				"auth-model": "native"
+			}
+		},
+		"mysql8-184c465228c-8f49fb64d36b772": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "local-mysql8-docker",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3307",
+				"database": "pcloud",
+				"url": "jdbc:mysql://localhost:3307/pcloud",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2",
+					"allowPublicKeyRetrieval": "true"
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-187ffec1a02-1b5d06e2a0bb1a2": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "sampledatabase",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "sampledatabase",
+				"url": "jdbc:postgresql://localhost:5432/sampledatabase",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-18d3595153e-27fd994898ee9210": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "progressive-dev",
+			"save-password": true,
+			"configuration": {
+				"host": "pr-dev.c0v9ljxqksg6.ap-south-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "progressive",
+				"url": "jdbc:postgresql://pr-dev.c0v9ljxqksg6.ap-south-1.rds.amazonaws.com:5432/progressive",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"resultset.grid.value.format": "EDIT",
+				"valueManager.public.\"event\":id": "plaintext"
+			}
+		},
+		"postgres-jdbc-18d5ea53e3b-412293934e380500": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "progressive-production",
+			"save-password": true,
+			"read-only": true,
+			"configuration": {
+				"host": "pr-beta.c0v9ljxqksg6.ap-south-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "progressive",
+				"url": "jdbc:postgresql://pr-beta.c0v9ljxqksg6.ap-south-1.rds.amazonaws.com:5432/progressive",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"bootstrap": {
+					"autocommit": false
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"security": {
+				"permission-restrictions": ["edit.data"]
+			}
+		}
+	}
+}
