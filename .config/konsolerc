@@ -8,7 +8,7 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=solarized light.profile,Neen Green.profile,(Default) Material-Ocean-Custom.profile,Nee Green Light.profile,Materila-Ocean-Custom-Black.profile,Gruvbox.profile
+Favorites=(Default) Material-Ocean-Custom.profile,Materila-Ocean-Custom-Black.profile,Nee Green Light.profile,solarized light.profile,Gruvbox.profile,Neen Green.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
@@ -22,7 +22,6 @@ ToolBarsMovable=Disabled
 Width 1600=800
 Width 1920=960
 Window-Maximized 1080x1920=true
-Window-Maximized 900x1600=true
 
 [Shortcut Schemes]
 Current Scheme=Default
