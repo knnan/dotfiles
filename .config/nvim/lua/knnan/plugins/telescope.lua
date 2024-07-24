@@ -7,12 +7,15 @@ require("telescope").setup {
     pickers = {
         find_files = {
             theme = "dropdown",
-            previewer = false
+            previewer = false,
         },
         current_buffer_fuzzy_find = {
             layout_strategy = "horizontal",
             layout_config = {
-                prompt_position = "top"
+                prompt_position = "top",
+                preview_width = 0.55,
+                mirror = true
+
             }
         },
         live_grep = {

@@ -1,6 +1,6 @@
+
+
  # If you come from bash you might have to change your $PATH.
-
-
 # zmodload zsh/zprof # uncomment to start profiling zsh
 
 export EDITOR="nvim"
@@ -129,12 +129,13 @@ alias ls='exa -a'
 alias ld='exa -D'
 alias ll='exa -las size'
 alias lt="exa --tree -L 2"
+alias rmdir="rm -r"
 #alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias cat='bat'
 alias catp='bat -p'
 alias df='duf'
 alias du='ncdu --color dark'
-alias hh='cd ~'
+alias jj='cd ~'
 alias reload="source ~/.zshrc"
 alias python=python3.9
 alias xclip="xclip -selection c"
