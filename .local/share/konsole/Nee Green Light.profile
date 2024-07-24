@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Neen Dark
-Font=Iosevka Term,10,-1,5,50,0,0,0,0,0
+Font=Iosevka Term,11,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=1

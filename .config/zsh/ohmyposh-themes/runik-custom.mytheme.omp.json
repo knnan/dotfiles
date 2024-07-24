@@ -19,6 +19,8 @@
                 },
                 {
                     "foreground": "#a5f19f",
+                   // "foreground": "#f8ff04",
+                    //"foreground": "#fce663",
                     "properties": {
                         "style": "folder"
                     },

@@ -1,5 +1,4 @@
-# If you come from bash you might have to change your $PATH.
-#
+ # If you come from bash you might have to change your $PATH.
 
 
 # zmodload zsh/zprof # uncomment to start profiling zsh
@@ -8,10 +7,13 @@ export EDITOR="nvim"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-
+export XDG_CONFIG_HOME="$HOME/.config"
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
+
+export UID=$(id -u)
+export GID=$(id -g)
 
 # set up Go lang path #
 export GOPATH=$HOME/go
@@ -54,13 +56,12 @@ export NVM_DIR="$HOME/.nvm"
 
 export MANPAGER='nvim +Man!'
 
-plugins=(zsh-nvm zsh-autosuggestions zsh-syntax-highlighting copybuffer git fzf fzf-tab autoupdate node colored-man-pages docker-compose)
+plugins=(zsh-nvm copybuffer git fzf fzf-tab zsh-autosuggestions fast-syntax-highlighting autoupdate node colored-man-pages docker-compose)
 
 # FZF configuration
 alias fd="fdfind"
 # Setting rg as the default source for fzf
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/
-*" 2> /dev/null'
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules}/' 2> /dev/null"
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --bind tab:down,shift-tab:up
 --scheme=path
@@ -69,6 +70,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --layout=reverse
 --preview="echo {}"
 --preview-window=right:40%:hidden:wrap
+--height=100%
 --bind=ctrl-/:toggle-preview'
 
 export FZF_CTRL_T_OPTS=$FZF_CTRL_T_OPTS'
@@ -109,11 +111,11 @@ source $ZSH/oh-my-zsh.sh
 # source fzf key bindings for zsh
 source ~/.config/zsh/key-bindings.zsh
 
-# bindkey '^ ' autosuggest-accept
-# bindkey '5~' autosuggest-accept
-bindkey '\e[20;5~' autosuggest-accept # set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
+# bindkey '^ ' autosuggest-accept # (ctrl+space) 
+bindkey '\e[20;5~' autosuggest-accept # (ctrl+enter) . set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
 
 
+alias wezconfig="vi ~/.config/wezterm/wezterm.lua"
 alias gitconfig="vi ~/.gitconfig"
 alias zshconfig="vi ~/.zshrc"
 alias zshhistory="vi ~/.zsh_history"
@@ -124,9 +126,9 @@ alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.lua"
 alias batconfig="vi ~/.config/bat/config"
 alias ls='exa -a'
-alias lsd='exa -D'
+alias ld='exa -D'
 alias ll='exa -las size'
-alias lst="exa --tree"
+alias lt="exa --tree -L 2"
 #alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias cat='bat'
 alias catp='bat -p'
@@ -137,10 +139,10 @@ alias reload="source ~/.zshrc"
 alias python=python3.9
 alias xclip="xclip -selection c"
 alias -g G=" | rg"
-alias vpn_connect="sudo openvpn --cd ~/vpn/blr-vpn --config pcloudy.ovpn  --auth-user-pass password.txt"
-alias vpn_connect_usa="sudo openvpn --cd ~/vpn/sify-vpn --config sify_vpn_config.ovpn  --auth-user-pass password.txt"
+alias vpn="sudo openvpn --cd ~/vpn/blr-vpn/ --config blr-vpn.ovpn  --auth-user-pass vpn_auth.txt"
+alias vpn_sify="sudo openvpn --cd ~/vpn/sify-vpn --config sify-vpn.ovpn  --auth-user-pass vpn_auth.txt"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias sys-update="sudo apt update -y && sudo apt upgrade -y"
+alias sys-update="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
 alias shl-update="upgrade_oh_my_zsh_all"
 alias dc="docker compose"
 alias dd="dev-dockers"
@@ -179,9 +181,11 @@ remove-pkg() {
   sudo apt remove --purge "$@"
   sudo apt autoclean -y && sudo apt autoremove -y
 }
+
 system-update() {
-  sudo apt update -y || echo "some issue"
-  sudo apt upgrade -y || echo "some issue"
+  sudo apt update -y || echo "apt update failed"
+  sudo apt upgrade -y || echo "apt upgrade failed"
+  flatpak update -y || echo "flatpak update failed"
   sudo apt autoremove -y || echo "some Issue"
   sudo apt autoclean -y || echo "some issue"
 }

@@ -1,15 +1,15 @@
 [Background]
-Color=9,10,16
+Color=0,0,0
 RandomHueRange=360
 RandomSaturationRange=100
 
 [BackgroundFaint]
-Color=9,10,16
+Color=0,0,0
 RandomHueRange=360
 RandomSaturationRange=100
 
 [BackgroundIntense]
-Color=9,10,16
+Color=0,0,0
 RandomHueRange=360
 RandomSaturationRange=100
 
@@ -104,5 +104,5 @@ RandomSaturationRange=100
 Blur=true
 ColorRandomization=false
 Description=Materila-Ocean-Custom-Black
-Opacity=0.95
+Opacity=0.87
 Wallpaper=

@@ -11,9 +11,9 @@ opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
 opt.breakindent = true -- enable break indent
-
+opt.virtualedit = 'onemore'
 -- line wrapping
-opt.wrap = false
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true

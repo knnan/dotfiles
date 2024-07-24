@@ -1,3 +1,5 @@
+[core]
+	pager = delta
 [credential]
 	helper = store
 	UseHttpPath = true
@@ -5,14 +7,25 @@
 	name = knnan
 	email = 28503456+knnan@users.noreply.github.com
 [diff]
-	tool = smerge
+	colorMoved = default
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	side-by-side = false
+	line-numbers = true
+	# delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
 [difftool]
 	prompt = false
+
 [alias]
 	parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
 	sts = status
 	ch = checkout
 	chb = checkout -b
+	uncommit = reset --soft HEAD~1
 	ls= log --oneline -n 10
 	dlt = !git diff | delta --features side-by-side
 [includeIf "gitdir:~/Development/work_code/PCLOUDY/"]

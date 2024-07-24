@@ -15,6 +15,12 @@ require("telescope").setup {
                 prompt_position = "top"
             }
         },
+        live_grep = {
+            layout_strategy = "horizontal",
+            layout_config = {
+                prompt_position = "top"
+            }
+        },
         help_tags = {
 
             mappings = {
@@ -44,6 +50,7 @@ require("telescope").setup {
         wrap_results = true,
         file_ignore_patterns = {
             ".git/",
+            "node_modules/",
             ".cache",
             "%.o",
             "%.a",
@@ -80,7 +87,7 @@ vim.keymap.set('n', '<C-F>', builtin.current_buffer_fuzzy_find, {
 
 })
 vim.keymap.set('n', '<a-p>', builtin.commands, {})
-vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>ff', builtin.live_grep, {})
 vim.keymap.set('n', '<C-O>', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- Shortcut for searching your Neovim configuration files

@@ -1,14 +1,14 @@
 [Desktop Entry]
-DefaultProfile=(Default) Material-Ocean-Custom.profile
+DefaultProfile=Materila-Ocean-Custom-Black.profile
 
 [DownloadDialog Settings]
 Height 1080=502
-Height 900=425
+Height 900=429
 Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=(Default) Material-Ocean-Custom.profile,Materila-Ocean-Custom-Black.profile,Nee Green Light.profile,solarized light.profile,Gruvbox.profile,Neen Green.profile
+Favorites=Nee Green Light.profile,solarized light.profile,Materila-Ocean-Custom-Black.profile,(Default) Material-Ocean-Custom.profile,Neen Green.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
@@ -22,6 +22,7 @@ ToolBarsMovable=Disabled
 Width 1600=800
 Width 1920=960
 Window-Maximized 1080x1920=true
+Window-Maximized 900x1600=true
 
 [Shortcut Schemes]
 Current Scheme=Default
