@@ -13,7 +13,7 @@ opt.smartindent = true
 opt.breakindent = true -- enable break indent
 opt.virtualedit = 'onemore'
 -- line wrapping
-opt.wrap = true
+opt.wrap = false
 
 -- search settings
 opt.ignorecase = true

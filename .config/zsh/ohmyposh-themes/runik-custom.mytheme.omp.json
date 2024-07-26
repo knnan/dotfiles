@@ -18,9 +18,11 @@
                     }
                 },
                 {
-                    "foreground": "#a5f19f",
-                   // "foreground": "#f8ff04",
-                    //"foreground": "#fce663",
+                    // "foreground": "#a5f19f",
+                    // "foreground": "#f8ff04",
+                    // "foreground": "#63f2fc",
+                    // "foreground": "#626262",
+                    "foreground": "#04c85d",
                     "properties": {
                         "style": "folder"
                     },
@@ -33,10 +35,10 @@
                 {
                     "type": "git",
                     "style": "diamond",
-                    "foreground": "#6468bb",
-                    "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+                    "foreground": "#fad764",
+                    "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
                     "properties": {
-                        "branch_icon": "\uE0A0 ",
+                        "branch_icon": "\uE0A0",
                         "fetch_stash_count": true,
                         "fetch_status": true,
                         "fetch_upstream_icon": true,
@@ -54,8 +56,8 @@
                     "type": "node",
                     "style": "diamond",
                     "display_mode": "files",
-                    "foreground": "#6468bb",
-                    "template": " \uE718  {{ .Full }} "
+                    "foreground": "#64bb81",
+                    "template": " \uE781  {{ .Full }} "
                 }
             ],
             "newline": true
@@ -112,7 +114,9 @@
                     "type": "exit",
                     "style": "powerline",
                     "foreground": "#A9FFB4",
-                    "foreground_templates": ["{{ if gt .Code 0 }}#ef5350{{ end }}"],
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}#ef5350{{ end }}"
+                    ],
                     "template": "\u279C ",
                     "properties": {
                         "always_enabled": true

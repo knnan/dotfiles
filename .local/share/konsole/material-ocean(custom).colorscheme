@@ -1,14 +1,20 @@
 [Background]
-Color=15,17,26
+Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundFaint]
-Color=15,17,26
+Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundIntense]
-Color=15,17,26
+Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [Color0]
-Color=0,0,0
+Color=59,66,82
 
 [Color0Faint]
 Color=59,66,82
@@ -35,13 +41,13 @@ Color=177,242,186
 Color=177,242,186
 
 [Color3]
-Color=235,203,139
+Color=252,233,79
 
 [Color3Faint]
 Color=235,203,139
 
 [Color3Intense]
-Color=235,203,139
+Color=227,196,91
 
 [Color4]
 Color=106,110,198
@@ -81,16 +87,22 @@ Color=180,142,173
 
 [Foreground]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundFaint]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundIntense]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [General]
 Blur=true
 ColorRandomization=false
-Description=mmd
-Opacity=0.96
+Description=Materila-Ocean-Custom-Black
+Opacity=0.87
 Wallpaper=

@@ -42,7 +42,8 @@ return packer.startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'navarasu/onedark.nvim' -- Theme inspired by Atom
     use 'marko-cerovac/material.nvim' -- Better material theme
-    -- use { "kaicataldo/material.vim", branch = "main" }
+    use 'sainnhe/gruvbox-material'
+
     use {
         "2nthony/vitesse.nvim",
         requires = {

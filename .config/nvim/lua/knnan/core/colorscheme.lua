@@ -111,9 +111,12 @@ require('material').setup({
 -- })
 vim.g.material_style = "deep ocean"
 
-
+vim.g.gruvbox_material_background = 'hard'
+vim.g.gruvbox_material_foreground = 'material'
+vim.g.gruvbox_material_transparent_background = '1'
 
 -- vim.cmd.colorscheme("onedark")
 vim.cmd.colorscheme("catppuccin-mocha")
 vim.cmd.colorscheme("vitesse")
+vim.cmd.colorscheme("gruvbox-material")
 vim.cmd.colorscheme("material")

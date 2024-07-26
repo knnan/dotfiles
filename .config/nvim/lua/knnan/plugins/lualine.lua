@@ -6,6 +6,7 @@ end
 lualine.setup({
     options = {
         -- theme= "gruvbox-material"
-        theme = "everforest"
+        -- theme = "everforest"
+        theme = "iceberg_dark"
     }
 })
