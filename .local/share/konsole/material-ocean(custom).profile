@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=material-ocean(custom)
-Font=JetBrains Mono,11,-1,5,50,0,0,0,0,0
+Font=Iosevka Term,13.5,-1,5,57,0,0,0,0,0,Medium
 UseFontLineChararacters=true
 
 [Cursor Options]

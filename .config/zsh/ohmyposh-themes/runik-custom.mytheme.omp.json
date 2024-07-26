@@ -12,7 +12,7 @@
                     "style": "diamond",
                     "foreground": "#a9ffb4",
                     "leading_diamond": "<#09be73>\u28FF </>",
-                    "template": "{{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2877</>",
+                    "template": "{{ if .SSHSession }}\uf817  {{ end }}{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2877</>",
                     "properties": {
                         "display_host": true
                     }
@@ -22,14 +22,14 @@
                     // "foreground": "#f8ff04",
                     // "foreground": "#63f2fc",
                     // "foreground": "#626262",
-                    "foreground": "#04c85d",
+                    "foreground": "#67ca93",
                     "properties": {
                         "style": "folder"
                     },
                     "style": "plain",
-                    // "template": " \ue5ff  {{ .Path }} ",
+                    // "template": " \ue5ff 🖿  🗁 {{ .Path }} ",
                     // "template": " <#09be73>\u2877</> \ue5ff  {{ .Path }} ",
-                    "template": " {{ .Path }} ",
+                    "template": " 🖿  {{ .Path }} ",
                     "type": "path"
                 },
                 {

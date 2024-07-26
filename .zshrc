@@ -25,6 +25,7 @@ export PATH
 
 eval "$(oh-my-posh init zsh --config ~/.config/zsh/ohmyposh-themes/runik-custom.mytheme.omp.json)"
 
+
 export UPDATE_ZSH_DAYS=10
 
 ENABLE_CORRECTION="true"
