@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=Breeze
-Font=Iosevka Term,11,-1,5,50,0,0,0,0,0
+ColorScheme=test
+Font=Iosevka Term,12,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]

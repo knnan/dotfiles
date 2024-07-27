@@ -18,31 +18,25 @@
                     }
                 },
                 {
-                    // "foreground": "#a5f19f",
-                    // "foreground": "#f8ff04",
-                    // "foreground": "#63f2fc",
-                    // "foreground": "#626262",
                     "foreground": "#67ca93",
                     "properties": {
                         "style": "folder"
                     },
                     "style": "plain",
-                    // "template": " \ue5ff 🖿  🗁 {{ .Path }} ",
-                    // "template": " <#09be73>\u2877</> \ue5ff  {{ .Path }} ",
                     "template": " 🖿  {{ .Path }} ",
                     "type": "path"
                 },
                 {
                     "type": "git",
-                    "style": "diamond",
+                    "style": "powerline",
                     "foreground": "#fad764",
-                    "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
+                    "template": " {{ .UpstreamIcon }} {{ .HEAD }} {{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }} ",
                     "properties": {
-                        "branch_icon": "\uE0A0",
+                        "branch_icon": "\uE0A0 ",
                         "fetch_stash_count": true,
+                        "fetch_bare_info": true,
                         "fetch_status": true,
-                        "fetch_upstream_icon": true,
-                        "fetch_worktree_count": true
+                        "fetch_upstream_icon": true
                     }
                 },
                 {

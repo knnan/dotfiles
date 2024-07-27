@@ -29,4 +29,4 @@
 	ls= log --oneline -n 10
 	dlt = !git diff | delta --features side-by-side
 [includeIf "gitdir:~/Development/work_code/PCLOUDY/"]
-	path = ~/.gitconfig-work
+	path = ~/.config/git/work.config

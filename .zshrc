@@ -14,9 +14,10 @@ export ZSH="$HOME/.oh-my-zsh"
 
 
 # set up Go lang path #
-export GOPATH=$HOME/go
+export GOPATH=$HOME/.local/share/go
 
 PATH=/bin:/usr/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.ssh:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/go/bin:${PATH}
+
 export PATH
 
 # ZSH_THEME="robbyrussell"
@@ -50,10 +51,22 @@ HISTSIZE=1099999
 
 # nvm and zsh-nvm configs
 export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=false
 export NVM_COMPLETION=false
 export NVM_DIR="$HOME/.nvm"
 
 export MANPAGER='nvim +Man!'
+function change_node_version {
+	nvmrc="./.nvmrc"
+	if [ -f "$nvmrc" ]; then
+		version="$(cat "$nvmrc")"
+		nvm use $version
+		zle reset-prompti && zle -R
+
+	fi
+}
+
+chpwd_functions=(change_node_version)
 
 # plugins=(
 #   zsh-nvm 
@@ -85,7 +98,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --preview-window=right:40%:hidden:wrap
 --height=50%
 --bind tab:down,shift-tab:up
---bind space:toggle+down
+--bind ctrl-space:toggle+down
 --bind=ctrl-/:toggle-preview
 --color=hl:#04d462,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
 --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
@@ -128,7 +141,7 @@ FZF_ALT_C_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude 
 
 
 plugins=(
-  zsh-nvm 
+  zsh-nvm
   copybuffer 
   git 
   fzf 
