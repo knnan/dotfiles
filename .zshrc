@@ -51,7 +51,6 @@ setopt HIST_SAVE_NO_DUPS
 SAVEHIST=999999
 HISTSIZE=1099999
 
-
 export MANPAGER='nvim +Man!'
 
 plugins=(
@@ -62,7 +61,6 @@ plugins=(
   dotbare
   autoupdate 
   node 
-  fzf-tab
   colored-man-pages 
   docker-compose
 )
@@ -128,7 +126,7 @@ _fzf_compgen_dir() {
 
 FZF_CTRL_T_COMMAND='fdfind --hidden --follow --exclude ".git" --exclude "node_modules" .'
 FZF_CTRL_K_COMMAND='fdfind --type d --no-ignore --follow --exclude ".git" --exclude "node_modules" . ~'
-FZF_ALT_C_COMMAND="fdfind --hidden --follow --type d --no-ignore --ignore-file ${XDG_CONFIG_HOME}/fd/ignore . /"
+FZF_ALT_C_COMMAND="fdfind --hidden --follow --type d --no-ignore --ignore-file ${XDG_CONFIG_HOME}/fd/ignore . ~"
 
 # source fzf key bindings for zsh
 source "${XDG_CONFIG_HOME}/fzf/fzf.zsh"
@@ -144,7 +142,7 @@ source "${XDG_CONFIG_HOME}/fzf/custom-keybindings.zsh"
 # bindkey '^ ' autosuggest-accept # (ctrl+space) 
 export FZF_COMPLETION_TRIGGER=''
 bindkey '\e[20;5~' autosuggest-accept # (ctrl+enter) . set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
-bindkey '^ ' fzf-completion
+bindkey '^I' fzf-completion
 bindkey '^[i' fzf-completion
 
 
@@ -154,15 +152,15 @@ alias zshconfig="vi ~/.zshrc"
 alias zshhistory="vi ~/.zsh_history"
 alias spaceconfig="vi ~/.config/spaceship.zsh"
 alias sshconfig="vi ~/.ssh/config"
-alias sshconfig-work="vi ~/.ssh/conf.d/config.work"
-alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
+alias sshconfig-work="vi ~/.ssh/config.d/work.config"
+alias sshconfig-pers="vi ~/.ssh/config.d/personal.config"
 alias viconfig="vi ~/.config/nvim/init.lua"
 alias batconfig="vi ~/.config/bat/config"
 alias ls='lsd -a'
 alias ld='lsd -d'
 alias ll='lsd -la'
 alias lst="lsd --tree --depth 2"
-alias rmdir="rm -r"
+alias rmdir="rm -rf"
 #alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias cat='bat'
 alias catp='bat -p'
@@ -182,6 +180,7 @@ alias shl-update="upgrade_oh_my_zsh_all"
 alias dc="docker compose"
 alias dd="dev-dockers"
 alias ansp="ansible-playbook"
+alias g-unshallow="git fetch --unshallow || git fetch --all"
 
 function expand-alias() {
 	zle _expand_alias
@@ -297,3 +296,6 @@ if [ -d "$FNM_PATH" ]; then
   eval "$(fnm env --use-on-cd)"
 fi
 
+# export NVM_DIR="$HOME/.config/nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -33,6 +33,13 @@ return packer.startup(function(use)
     -- Packer Manager
     use 'wbthomason/packer.nvim'
 
+    use 'voldikss/vim-floaterm'
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            { 'MunifTanjim/nui.nvim' }
+        }
+    }
     -- Git related plugins
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'

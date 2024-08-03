@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+vim.g.floaterm_keymap_toggle = '<Leader>ft'
 
 keymap.set("i", "jj", "<ESC>")
 
@@ -78,3 +79,5 @@ keymap.set("n", "<a-e>", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<C-R>", ":lua vim.lsp.buf.format {async = true}<CR>")
 keymap.set("i", "<C-R>", "<ESC>:lua vim.lsp.buf.format {async = true}<CR>i")
+
+keymap.set('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})

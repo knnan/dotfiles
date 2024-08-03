@@ -10,7 +10,8 @@
                 {
                     "type": "session",
                     "style": "diamond",
-                    "foreground": "#a9ffb4",
+                    // "foreground": "#a9ffb4",
+                    "foreground": "#84d18e",
                     "leading_diamond": "<#09be73>\u28FF </>",
                     "template": "{{ if .SSHSession }}\uf817  {{ end }}{{ .UserName }} ᛟᚲᛖᚨᚾ <#09be73>\u2877</>",
                     "properties": {
@@ -18,7 +19,8 @@
                     }
                 },
                 {
-                    "foreground": "#67ca93",
+                    // "foreground": "#67ca93",
+                    "foreground": "#0fffa5",
                     "properties": {
                         "style": "folder"
                     },

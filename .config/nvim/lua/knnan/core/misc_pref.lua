@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
   desc = 'Set filetype for SSH config directory',
-  pattern = '*/.ssh/conf.d/*',
+  pattern = '*/.ssh/config.d/*',
   command = 'set filetype=sshconfig'
 })
 vim.api.nvim_create_autocmd("QuitPre", {
