@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=material-ocean(custom)
-Font=Iosevka Term,13.5,-1,5,57,0,0,0,0,0,Medium
+Font=Iosevka Term,13.5,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]

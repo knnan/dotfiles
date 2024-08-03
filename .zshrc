@@ -8,6 +8,8 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_DIR="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
@@ -49,50 +51,38 @@ setopt HIST_SAVE_NO_DUPS
 SAVEHIST=999999
 HISTSIZE=1099999
 
-# nvm and zsh-nvm configs
-export NVM_LAZY_LOAD=true
-export NVM_AUTO_USE=false
-export NVM_COMPLETION=false
-export NVM_DIR="$HOME/.nvm"
 
 export MANPAGER='nvim +Man!'
-function change_node_version {
-	nvmrc="./.nvmrc"
-	if [ -f "$nvmrc" ]; then
-		version="$(cat "$nvmrc")"
-		nvm use $version
-		zle reset-prompti && zle -R
 
-	fi
-}
+plugins=(
+  copybuffer 
+  git 
+  zsh-autosuggestions 
+  fast-syntax-highlighting 
+  dotbare
+  autoupdate 
+  node 
+  fzf-tab
+  colored-man-pages 
+  docker-compose
+)
 
-chpwd_functions=(change_node_version)
-
-# plugins=(
-#   zsh-nvm 
-#   copybuffer 
-#   git 
-#   fzf 
-#   zsh-autosuggestions 
-#   fast-syntax-highlighting 
-#   autoupdate 
-#   node 
-#   colored-man-pages 
-#   docker-compose
-# )
-
+source $ZSH/oh-my-zsh.sh
 # FZF configuration
+
 
 
 alias fd="fdfind"
 
 # Setting rg as the default source for fzf
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules}/' 2> /dev/null"
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+# export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules}/' 2> /dev/null"
+FD_DEFAULT_COMMAND='fdfind --hidden --no-ignore --follow --exclude ".git" --exclude "node_modules" . 2> /dev/null'
+export FZF_DEFAULT_COMMAND=$FD_DEFAULT_COMMAND
+
+export FZF_DEFAULT_OPTS='
 --scheme=path
 --multi
 --border
---color=fg:#676767,fg+:#d0d0d0,bg:-1,bg+:-1
 --layout=reverse
 --preview="echo {}"
 --preview-window=right:40%:hidden:wrap
@@ -100,6 +90,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --bind tab:down,shift-tab:up
 --bind ctrl-space:toggle+down
 --bind=ctrl-/:toggle-preview
+--color=fg:#676767,fg+:#d0d0d0,bg:-1,bg+:-1
 --color=hl:#04d462,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
 --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
 --color=border:#262626,label:#aeaeae,query:#d9d9d9
@@ -132,41 +123,33 @@ _fzf_compgen_path() {
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fdfind --type d --hidden --follow --exclude ".git" --exclude "node_modules" . "$1"
+  fdfind --type d --no-ignore --follow --exclude ".git" --exclude "node_modules" . "$1"
 }
 
 FZF_CTRL_T_COMMAND='fdfind --hidden --follow --exclude ".git" --exclude "node_modules" .'
-FZF_CTRL_K_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude "node_modules" . ~'
-FZF_ALT_C_COMMAND='fdfind --type d --hidden --follow --exclude ".git" --exclude "node_modules" . ~'
-
-
-plugins=(
-  zsh-nvm
-  copybuffer 
-  git 
-  fzf 
-  zsh-autosuggestions 
-  fast-syntax-highlighting 
-  autoupdate 
-  node 
-  colored-man-pages 
-  docker-compose
-)
-
-
-source $ZSH/oh-my-zsh.sh
+FZF_CTRL_K_COMMAND='fdfind --type d --no-ignore --follow --exclude ".git" --exclude "node_modules" . ~'
+FZF_ALT_C_COMMAND="fdfind --hidden --follow --type d --no-ignore --ignore-file ${XDG_CONFIG_HOME}/fd/ignore . /"
 
 # source fzf key bindings for zsh
-source ~/.config/zsh/key-bindings.zsh
+source "${XDG_CONFIG_HOME}/fzf/fzf.zsh"
+source "${XDG_CONFIG_HOME}/fzf/custom-keybindings.zsh"
+
+# zle     -N   fzf-file-widget
+# bindkey '^P' fzf-file-widget
+
+# zle     -N   fzf-cd-widget
+# bindkey '^k' fzf-cd-widget
+
 
 # bindkey '^ ' autosuggest-accept # (ctrl+space) 
 export FZF_COMPLETION_TRIGGER=''
 bindkey '\e[20;5~' autosuggest-accept # (ctrl+enter) . set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
-# bindkey '^T' fzf-completion
+bindkey '^ ' fzf-completion
+bindkey '^[i' fzf-completion
 
 
 alias wezconfig="vi ~/.config/wezterm/wezterm.lua"
-alias gitconfig="vi ~/.gitconfig"
+alias gitconfig="vi ${XDG_CONFIG_HOME}/git/config"
 alias zshconfig="vi ~/.zshrc"
 alias zshhistory="vi ~/.zsh_history"
 alias spaceconfig="vi ~/.config/spaceship.zsh"
@@ -175,10 +158,10 @@ alias sshconfig-work="vi ~/.ssh/conf.d/config.work"
 alias sshconfig-pers="vi ~/.ssh/conf.d/config.personal"
 alias viconfig="vi ~/.config/nvim/init.lua"
 alias batconfig="vi ~/.config/bat/config"
-alias ls='exa -a'
-alias ld='exa -D'
-alias ll='exa -las size'
-alias lt="exa --tree -L 2"
+alias ls='lsd -a'
+alias ld='lsd -d'
+alias ll='lsd -la'
+alias lst="lsd --tree --depth 2"
 alias rmdir="rm -r"
 #alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias cat='bat'
@@ -200,10 +183,20 @@ alias dc="docker compose"
 alias dd="dev-dockers"
 alias ansp="ansible-playbook"
 
+function expand-alias() {
+	zle _expand_alias
+	# zle self-insert
+}
+zle -N expand-alias
+bindkey '^[o' expand-alias
+
 if type nvim >/dev/null 1>&1; then
   alias vim='nvim'
   alias vi='nvim'
 fi
+
+export NODE_REPL_HISTORY=""
+export REDISCLI_HISTFILE=/dev/null
 
 alias eve="code --list-extensions |
 xargs -L 1 echo code --install-extension |
@@ -295,4 +288,12 @@ export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 # zprof # uncomment end of profiling
 
-export PATH=$PATH
+
+# fnm
+FNM_PATH="/home/knnan/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/knnan/.local/share/fnm:$PATH"
+  # eval "`fnm env`"
+  eval "$(fnm env --use-on-cd)"
+fi
+

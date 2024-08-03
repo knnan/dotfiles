@@ -4,8 +4,8 @@
 	helper = store
 	UseHttpPath = true
 [user]
-	name = knnan
-	email = 28503456+knnan@users.noreply.github.com
+	name = kiranyadavm
+	email = 94350938+kiranyadavm@users.noreply.github.com
 [diff]
 	colorMoved = default
 
@@ -30,3 +30,8 @@
 	dlt = !git diff | delta --features side-by-side
 [includeIf "gitdir:~/Development/work_code/PCLOUDY/"]
 	path = ~/.config/git/work.config
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

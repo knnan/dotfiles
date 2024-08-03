@@ -6,7 +6,7 @@ local keymap = vim.keymap -- for conciseness
 
 keymap.set("i", "jj", "<ESC>")
 
--- map delete and cut to blackhole registers
+-- map delete and cut to blackhole registers.
 
 -- keymap.set("n", "dd", function()
 --   if vim.fn.getline(".") == "" then return '\"_dd' end

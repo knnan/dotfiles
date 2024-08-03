@@ -1,5 +1,5 @@
 [Background]
-Color=0,0,0
+Color=17,17,17
 RandomHueRange=360
 RandomSaturationRange=100
 
@@ -41,7 +41,7 @@ Color=177,242,186
 Color=177,242,186
 
 [Color3]
-Color=252,233,79
+Color=233,185,110
 
 [Color3Faint]
 Color=235,203,139
@@ -86,7 +86,7 @@ Color=229,233,240
 Color=180,142,173
 
 [Foreground]
-Color=255,255,255
+Color=30,187,105
 RandomHueRange=360
 RandomSaturationRange=100
 
