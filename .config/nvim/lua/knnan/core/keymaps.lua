@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local keymap = vim.keymap -- for conciseness
+local keymap = vim.keymap -- for cociseness
 
 vim.g.floaterm_keymap_toggle = '<Leader>ft'
 

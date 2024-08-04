@@ -35,6 +35,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=81'
 export HISTORY_IGNORE="google*"
+export HISTORY_IGNORE="(pwd|cd ..|ghp*|clear|vi*)"
 
 # export MANWIDTH=999
 
@@ -186,6 +187,7 @@ function expand-alias() {
 	zle _expand_alias
 	# zle self-insert
 }
+
 zle -N expand-alias
 bindkey '^[o' expand-alias
 
@@ -295,7 +297,3 @@ if [ -d "$FNM_PATH" ]; then
   # eval "`fnm env`"
   eval "$(fnm env --use-on-cd)"
 fi
-
-# export NVM_DIR="$HOME/.config/nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

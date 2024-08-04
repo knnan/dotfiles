@@ -65,7 +65,7 @@ require("telescope").setup {
             "%.png",
             "%.jpg",
             "%.jpeg",
-            "%mp3",
+            "%.mp3",
             "%.zip"
         },
         mappings = {
