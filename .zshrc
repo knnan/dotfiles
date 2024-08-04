@@ -262,7 +262,7 @@ clip() {
 cfg-up(){
 
   default_msg="cfg changes"
-  msg="${1-default_msg}"
+  msg="${1-$default_msg}"
   echo $msg
   config status
   config add -u -- ':!/home/knnan/.zsh_history'
