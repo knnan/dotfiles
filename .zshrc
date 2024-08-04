@@ -259,6 +259,14 @@ clip() {
   cat $1 | xclip -selection c
 }
 
+cfg-up(){
+  config status
+  config add -u -- ':!/home/knnan/.zsh_history'
+  config commit -m "${1:-'cfg changes'}"
+  config push
+  config status
+}
+
 dotfiles_add() {
   config status
   config add -u
