@@ -259,15 +259,14 @@ clip() {
   cat $1 | xclip -selection c
 }
 
-cfg-up(){
+config-up(){
 
   default_msg="cfg changes"
   msg="${1-$default_msg}"
-  echo $msg
   config status
   config add -u -- ':!/home/knnan/.zsh_history'
-  config commit -m "${1:-$default_msg}"
-  # config push
+  config commit -m "${msg}"
+  config push
   config ls
 }
 
