@@ -86,7 +86,7 @@ Color=229,233,240
 Color=180,142,173
 
 [Foreground]
-Color=30,187,105
+Color=15,255,165
 RandomHueRange=360
 RandomSaturationRange=100
 

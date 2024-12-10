@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=material-ocean(custom)
-Font=Iosevka Term,13.5,-1,5,50,0,0,0,0,0
+Font=Iosevka Term,12,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]
@@ -19,6 +19,7 @@ TerminalMargin=14
 KeyBindings=default(custom)
 
 [Scrolling]
+HistoryMode=2
 ScrollBarPosition=2
 
 [Terminal Features]
