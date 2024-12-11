@@ -1,19 +1,19 @@
-
 # If you come from bash you might have to change your $PATH.
 # zmodload zsh/zprof # uncomment to start profiling zsh
 
+export TERM="xterm-256color"
 export EDITOR="nvim"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+
+# Xdg configs
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_DIR="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # Path to your oh-my-zsh installation.
-export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
-
 
 # set up Go lang path #
 
@@ -30,7 +30,6 @@ export PATH=$PATH:/bin:/usr/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.ssh:$HOME
 
 eval "$(oh-my-posh init zsh --config ~/.config/zsh/ohmyposh-themes/runik-custom.mytheme.omp.json)"
 
-
 export UPDATE_ZSH_DAYS=10
 
 ENABLE_CORRECTION="true"
@@ -42,7 +41,6 @@ export HISTORY_IGNORE="(pwd|cd ..|ghp*|clear|vi*)"
 # export MANWIDTH=999
 
 # History
-
 HISTSIZE=1099999
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -60,20 +58,17 @@ setopt EXTENDED_HISTORY
 export MANPAGER='nvim +Man!'
 
 plugins=(
-  copybuffer 
-  git 
+  copybuffer
+  git
   fzf-tab
-  zsh-autosuggestions 
-  fast-syntax-highlighting 
+  zsh-autosuggestions
+  fast-syntax-highlighting
   you-should-use
-  autoupdate 
-  node 
-  colored-man-pages 
-  docker-compose
+  autoupdate
 )
 
 # Better SSH/Rsync/SCP Autocomplete
-h=($(tail -n +1 ~/.ssh/config.d/* 2> /dev/null | grep -i '^\s*host\(name\)\? ' | awk '{for (i = 2; i <= NF; i++) print $1 " " $i}' |  grep -v '[*?%]' | awk '{for (i = 2; i <= NF; i++) printf $i" " }' | sort -u))
+h=($(tail -n +1 ~/.ssh/config.d/* 2>/dev/null | grep -i '^\s*host\(name\)\? ' | awk '{for (i = 2; i <= NF; i++) print $1 " " $i}' | grep -v '[*?%]' | awk '{for (i = 2; i <= NF; i++) printf $i" " }' | sort -u))
 if [[ $#h -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts $h
 fi
@@ -83,8 +78,6 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 source $ZSH/oh-my-zsh.sh
 # FZF configuration
-
-
 
 alias fd="fdfind"
 
@@ -109,16 +102,13 @@ export FZF_DEFAULT_OPTS='
 --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
 --color=border:#262626,label:#aeaeae,query:#d9d9d9
 '
+# Completion options  to fzf command
+export FZF_COMPLETION_OPTS='+c -x'
 
 export FZF_CTRL_T_OPTS=$FZF_CTRL_T_OPTS'
 --preview="bat --style=numbers --color=always --line-range :500 {}"
-'
-export FZF_CTRL_T_OPTS=$FZF_CTRL_T_OPTS'
 --scheme=history
 '
-
-# Completion options  to fzf command
-export FZF_COMPLETION_OPTS='+c -x'
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
@@ -147,13 +137,11 @@ source "${XDG_CONFIG_HOME}/fzf/custom-keybindings.zsh"
 # zle     -N   fzf-cd-widget
 # bindkey '^k' fzf-cd-widget
 
-
-# bindkey '^ ' autosuggest-accept # (ctrl+space) 
+# bindkey '^ ' autosuggest-accept # (ctrl+space)
 export FZF_COMPLETION_TRIGGER=''
 bindkey '\e[20;5~' autosuggest-accept # (ctrl+enter) . set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
 # bindkey '^I' fzf-completion
 # bindkey '^[i' fzf-completion
-
 
 alias wezconfig="vi ~/.config/wezterm/wezterm.lua"
 alias gitconfig="vi ${XDG_CONFIG_HOME}/git/config"
@@ -181,25 +169,28 @@ alias reload="source ~/.zshrc"
 alias xclip="xclip -selection c"
 alias -g G=" | rg"
 alias -g fz=" | fzf"
-unalias gl
-alias gl="git ls"
-alias gpl="git pull"
+
 alias vpn_blr="sudo openvpn --cd ~/vpn/blr-vpn/ --config blr-vpn.ovpn  --auth-user-pass vpn_auth.txt"
 alias vpn_sify="sudo openvpn --cd ~/vpn/sify-vpn --config sify-vpn.ovpn  --auth-user-pass vpn_auth.txt"
 alias vpn="vpn_sify"
+
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sys-update="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
 alias shl-update="upgrade_oh_my_zsh_all"
+
 alias dc="docker compose"
 alias dd="dev-dockers"
 alias ansp="ansible-playbook"
+
+unalias gl
+alias gl="git ls"
+alias gpl="git pull"
 alias g-unshallow="git fetch --unshallow || git fetch --all"
 
 function expand-alias() {
-	zle _expand_alias
-	# zle self-insert
+  zle _expand_alias
+  # zle self-insert
 }
-
 zle -N expand-alias
 bindkey '^[o' expand-alias
 
@@ -210,11 +201,6 @@ fi
 
 export NODE_REPL_HISTORY=""
 export REDISCLI_HISTFILE=/dev/null
-
-alias eve="code --list-extensions |
-xargs -L 1 echo code --install-extension |
-sed 's/$/ --force/' |
-sed '\$!s/$/ \&\&/' > install-extensions.sh"
 
 docker-service() {
   sudo systemctl $1 containerd.service
@@ -260,6 +246,7 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
 vif() {
   nvim "$(fzf)"
 }
@@ -271,8 +258,7 @@ clip() {
   cat $1 | xclip -selection c
 }
 
-config-up(){
-
+config-save() {
   default_msg="cfg changes"
   msg="${1-$default_msg}"
   config status
@@ -301,14 +287,6 @@ help() {
   fi
 }
 
-gch() {
-  local branches branch
-  branches=$(git branch --all | grep -v HEAD) &&
-  branch=$(echo "$branches" |
-           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
-  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
-
 # ORIGINAL_LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
 
 LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=01;35;31:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
@@ -318,17 +296,16 @@ LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 export LS_COLORS
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-# zprof # uncomment end of profiling
-
 
 # fnm
 FNM_PATH="/home/knnan/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="/home/knnan/.local/share/fnm:$PATH"
-  # eval "`fnm env`"
   eval "$(fnm env --use-on-cd)"
 fi
+# zprof # uncomment end of profiling
 
+# uncomment the following only when testing nvm
 # export NVM_DIR="$HOME/.config/nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

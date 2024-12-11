@@ -7,7 +7,7 @@ UseFontLineChararacters=true
 [Cursor Options]
 CursorShape=1
 CustomCursorColor=255,255,255
-UseCustomCursorColor=true
+UseCustomCursorColor=false
 
 [General]
 Name=material-ocean(custom)

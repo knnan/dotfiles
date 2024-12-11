@@ -13,3 +13,7 @@ require("knnan.plugins.nvimtree")
 require("knnan.plugins.format")
 require("knnan.plugins.misc")
 
+vim.api.nvim_create_autocmd({"VimLeave"}, {
+  pattern = '*',
+  command = 'set guicursor=a:ver25-blinkon250',
+})
