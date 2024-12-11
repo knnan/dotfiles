@@ -14,6 +14,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # set up Go lang path #
 
@@ -58,13 +59,11 @@ setopt EXTENDED_HISTORY
 export MANPAGER='nvim +Man!'
 
 plugins=(
-  copybuffer
   git
   fzf-tab
   zsh-autosuggestions
   fast-syntax-highlighting
   you-should-use
-  autoupdate
 )
 
 # Better SSH/Rsync/SCP Autocomplete
@@ -73,7 +72,6 @@ if [[ $#h -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts $h
 fi
 
-# zstyle ':fzf-tab:*' fzf-flags --height=~40
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 source $ZSH/oh-my-zsh.sh
