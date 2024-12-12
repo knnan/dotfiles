@@ -58,6 +58,9 @@ keymap.set("i", "<C-Z>", "<ESC>ui")
 keymap.set("n", "<C-I>", "o")
 keymap.set("i", "<C-I>", "<ESC>o")
 
+keymap.set("n", "<leader>sk", "0")
+keymap.set("n", "<leader>e", "$")
+
 
 
 

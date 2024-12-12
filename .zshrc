@@ -14,7 +14,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 
 # set up Go lang path #
 
@@ -73,6 +73,7 @@ if [[ $#h -gt 0 ]]; then
 fi
 
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' fzf-flags --height=~40
 
 source $ZSH/oh-my-zsh.sh
 # FZF configuration
@@ -139,7 +140,7 @@ source "${XDG_CONFIG_HOME}/fzf/custom-keybindings.zsh"
 export FZF_COMPLETION_TRIGGER=''
 bindkey '\e[20;5~' autosuggest-accept # (ctrl+enter) . set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
 # bindkey '^I' fzf-completion
-# bindkey '^[i' fzf-completion
+# bindkey '^[i' fzf-completion # (alt+i)
 
 alias wezconfig="vi ~/.config/wezterm/wezterm.lua"
 alias gitconfig="vi ${XDG_CONFIG_HOME}/git/config"

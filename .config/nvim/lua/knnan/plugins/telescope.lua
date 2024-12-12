@@ -86,7 +86,7 @@ require("telescope").setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 vim.keymap.set('n', '<C-P>', builtin.find_files, {})
-vim.keymap.set('n', '<C-F>', builtin.current_buffer_fuzzy_find, {
+vim.keymap.set('n', '<leader>fi', builtin.current_buffer_fuzzy_find, {
 
 })
 vim.keymap.set('n', '<a-p>', builtin.commands, {})

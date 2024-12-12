@@ -8,14 +8,14 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=material-ocean(custom).profile,Test.profile
+Favorites=Test.profile,material-ocean(custom).profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
 
 [MainWindow]
 Height 1080=489
-Height 900=834
+Height 900=696
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAABkAAAANCAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
