@@ -2,6 +2,36 @@
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "version": 2,
     "console_title_template": "{{ .Folder }}",
+    "palette": {
+        "git": "#FFFB38",
+        "username": "#FF9248",
+        "folder": "#FF4500",
+        "git-ahead": "#B388FF",
+        "sys-cpu": "#B388FF",
+        "sys-time": "#B388FF",
+        "exec-time": "#B388FF",
+        "runik-symbol": "#B388FF",
+        "dir-symbol": "#B388FF",
+        "red": "#FF0000",
+        "green": "#00FF00",
+        "blue": "#0000FF",
+        "white": "#FFFFFF",
+        "black": "#111111",
+        "green1": "#a9ffb4",
+        "green2": "#84d18e",
+        "green3": "#0fffa5",
+        "green4": "#09be73",
+        "green5": "#67ca93",
+        "green6": "#64bb81",
+        "green7": "#94ffa2",
+        "green8": "#81ff91",
+        "green9": "#A9FFB4",
+        "purple1": "#6468bb",
+        "purple2": "#a782d4",
+        "test": "#a782d4",
+        "yello1": "#fad764",
+        "brown1": "#FEF5ED"
+    },
     "blocks": [
         {
             "type": "prompt",
@@ -10,17 +40,16 @@
                 {
                     "type": "session",
                     "style": "diamond",
-                    // "foreground": "#a9ffb4",
-                    "foreground": "#84d18e",
-                    "leading_diamond": "<#09be73>\u28FF </>",
-                    "template": "{{ if .SSHSession }}\uf817  {{ end }}{{ .UserName }} <#0fffa5>ᛟᚲᛖᚨᚾ</> <#09be73>\u2877</>",
+                    "foreground": "p:green3",
+                    // "leading_diamond": "<#09be73>\u26a1 </>",
+                    "leading_diamond": "<#45F1C2><b>\u26a1</b></>",
+                    "template": "{{ if .SSHSession }}\uf817  {{ end }}<b>{{ .UserName }}</b> <#0fffa5>ᛟᚲᛖᚨᚾ</> <#09be73>\u2877</>",
                     "properties": {
                         "display_host": true
                     }
                 },
                 {
-                    // "foreground": "#67ca93",
-                    "foreground": "#0fffa5",
+                    "foreground": "p:purple2",
                     "properties": {
                         "style": "folder"
                     },
@@ -31,7 +60,7 @@
                 {
                     "type": "git",
                     "style": "powerline",
-                    "foreground": "#fad764",
+                    "foreground": "p:yello1",
                     "template": " {{ .UpstreamIcon }} {{ .HEAD }} {{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }} ",
                     "properties": {
                         "branch_icon": "\uE0A0 ",
@@ -45,7 +74,7 @@
                     "type": "python",
                     "style": "diamond",
                     "display_mode": "context",
-                    "foreground": "#6468bb",
+                    "foreground": "p:purple1",
                     "template": " \uE235  {{  .Full }} {{ .Venv }}"
                 },
                 {
@@ -105,21 +134,23 @@
         {
             "type": "prompt",
             "alignment": "left",
+            "newline": true,
             "segments": [
                 {
-                    "type": "exit",
+                    "type": "text",
                     "style": "powerline",
-                    "foreground": "#A9FFB4",
+                    "foreground": "#45F1C2",
                     "foreground_templates": [
                         "{{ if gt .Code 0 }}#ef5350{{ end }}"
                     ],
+                    // "template": "<#45F1C2>\u279C\u276f</> ",
+                    // "template": "<#45F1C2><b>\u279C</b></> ",
                     "template": "\u279C ",
                     "properties": {
                         "always_enabled": true
                     }
                 }
-            ],
-            "newline": true
+            ]
         }
     ],
     "transient_prompt": {
