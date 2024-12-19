@@ -67,13 +67,17 @@ plugins=(
 )
 
 # Better SSH/Rsync/SCP Autocomplete
-h=($(tail -n +1 ~/.ssh/config.d/* 2>/dev/null | grep -i '^\s*host\(name\)\? ' | awk '{for (i = 2; i <= NF; i++) print $1 " " $i}' | grep -v '[*?%]' | awk '{for (i = 2; i <= NF; i++) printf $i" " }' | sort -u))
-if [[ $#h -gt 0 ]]; then
-  zstyle ':completion:*:ssh:*' hosts $h
+sshhosts=($(tail -n +1 ~/.ssh/config.d/* 2>/dev/null | \
+  grep -i '^\s*host\(name\)\? ' | \
+  awk '{for (i = 2; i <= NF; i++) print $1 " " $i}' | \
+  grep -v '[*?%]' | awk '{for (i = 2; i <= NF; i++) printf $i" " }' | \
+  sort -u))
+if [[ $#sshhosts -gt 0 ]]; then
+  zstyle ':completion:*:ssh:*' hosts $sshhosts
 fi
 
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
-zstyle ':fzf-tab:*' fzf-flags --height=~40
+# zstyle ':fzf-tab:*' fzf-flags --height=~40
 
 source $ZSH/oh-my-zsh.sh
 # FZF configuration
