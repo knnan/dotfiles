@@ -30,7 +30,15 @@
         "purple2": "#a782d4",
         "test": "#a782d4",
         "yello1": "#fad764",
-        "brown1": "#FEF5ED"
+        "brown1": "#FEF5ED",
+        "red1": "#ef5b56",
+        "matchagreen": "#2a4937",
+        "sandalyellow": "#d7b04b",
+        "sandalyellow1": "#ffb63d",
+        "lowfipurple": "#ffaadd",
+        "pastyGreen": "#97e997",
+        "pastyyelloa": "#dcf88b",
+        "pastyPurple": "#857293"
     },
     "blocks": [
         {
@@ -41,7 +49,6 @@
                     "type": "session",
                     "style": "diamond",
                     "foreground": "p:green3",
-                    // "leading_diamond": "<#09be73>\u26a1 </>",
                     "leading_diamond": "<#45F1C2><b>\u26a1</b></>",
                     "template": "{{ if .SSHSession }}\uf817  {{ end }}<b>{{ .UserName }}</b> <#0fffa5>ᛟᚲᛖᚨᚾ</> <#09be73>\u2877</>",
                     "properties": {
@@ -49,7 +56,7 @@
                     }
                 },
                 {
-                    "foreground": "p:purple2",
+                    "foreground": "p:pastyGreen",
                     "properties": {
                         "style": "folder"
                     },
@@ -60,7 +67,7 @@
                 {
                     "type": "git",
                     "style": "powerline",
-                    "foreground": "p:yello1",
+                    "foreground": "p:pastyyelloa",
                     "template": " {{ .UpstreamIcon }} {{ .HEAD }} {{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }} ",
                     "properties": {
                         "branch_icon": "\uE0A0 ",
