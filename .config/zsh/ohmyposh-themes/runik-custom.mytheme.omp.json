@@ -41,7 +41,9 @@
         "pastyPurple": "#857293",
         "burntOrange": "#faf16d",
         "vesperOrange": "#ffcd92",
-        "pastelGreen": "#46f7d3"
+        "pastelGreen": "#46f7d3",
+        "lightningYellow": "#ffdb35",
+        "lightningGreen": "#45F1C2"
     },
     "blocks": [
         {
@@ -52,7 +54,7 @@
                     "type": "session",
                     "style": "diamond",
                     "foreground": "p:green3",
-                    "leading_diamond": "<#45F1C2><b>\u26a1</b></>",
+                    "leading_diamond": "<p:lightningYellow><b>\u26a1</b></>",
                     "template": "{{ if .SSHSession }}\uf817  {{ end }}<b>{{ .UserName }}</b> <#0fffa5>ᛟᚲᛖᚨᚾ</> <#09be73>\u2877</>",
                     "properties": {
                         "display_host": true

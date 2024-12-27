@@ -261,7 +261,7 @@ clip() {
   cat $1 | xclip -selection c
 }
 
-config-save() {
+config-push() {
   default_msg="cfg changes"
   msg="${1-$default_msg}"
   config status
