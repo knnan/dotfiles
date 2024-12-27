@@ -54,7 +54,8 @@ fzf-folder-widget() {
 zle     -N   fzf-file-widget
 bindkey '^P' fzf-file-widget
 zle     -N   fzf-folder-widget
-bindkey '^T' fzf-folder-widget
+# bindkey '^T' fzf-folder-widget
+bindkey '^[i' fzf-folder-widget
 
 # Ensure precmds are run after cd
 fzf-redraw-prompt() {

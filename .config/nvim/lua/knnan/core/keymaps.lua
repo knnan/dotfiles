@@ -59,7 +59,7 @@ keymap.set("n", "<C-I>", "o")
 keymap.set("i", "<C-I>", "<ESC>o")
 
 keymap.set("n", "<leader>w", "0")
-keymap.set("n", "<leader>e", "$")
+keymap.set("n", "<leader>b", "$")
 
 
 
@@ -72,6 +72,7 @@ keymap.set("i", "<c-a>", "<ESC>ggVG")
 keymap.set("n", "<C-_>", ":Commentary<CR>")
 keymap.set("i", "<C-_>", "<ESC>:Commentary<CR>i")
 keymap.set("v", "<C-_>", ":Commentary<CR>")
+keymap.set("n", "m", "/")
 
 
 keymap.set("n", "<C-W>", ":bdelete<CR>")

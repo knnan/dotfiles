@@ -3,9 +3,9 @@
     "version": 2,
     "console_title_template": "{{ .Folder }}",
     "palette": {
-        "git": "#FFFB38",
+        "git": "#faf16d",
         "username": "#FF9248",
-        "folder": "#FF4500",
+        "folder": "#00ff88",
         "git-ahead": "#B388FF",
         "sys-cpu": "#B388FF",
         "sys-time": "#B388FF",
@@ -38,7 +38,8 @@
         "lowfipurple": "#ffaadd",
         "pastyGreen": "#97e997",
         "pastyyelloa": "#dcf88b",
-        "pastyPurple": "#857293"
+        "pastyPurple": "#857293",
+        "burntOrange": "#faf16d"
     },
     "blocks": [
         {
@@ -56,7 +57,7 @@
                     }
                 },
                 {
-                    "foreground": "p:pastyGreen",
+                    "foreground": "p:folder",
                     "properties": {
                         "style": "folder"
                     },
@@ -67,7 +68,7 @@
                 {
                     "type": "git",
                     "style": "powerline",
-                    "foreground": "p:pastyyelloa",
+                    "foreground": "p:git",
                     "template": " {{ .UpstreamIcon }} {{ .HEAD }} {{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }} ",
                     "properties": {
                         "branch_icon": "\uE0A0 ",

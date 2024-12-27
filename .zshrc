@@ -77,7 +77,7 @@ if [[ $#sshhosts -gt 0 ]]; then
 fi
 
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
-# zstyle ':fzf-tab:*' fzf-flags --height=~40
+zstyle ':fzf-tab:*' fzf-flags --height=~50
 
 source $ZSH/oh-my-zsh.sh
 # FZF configuration
