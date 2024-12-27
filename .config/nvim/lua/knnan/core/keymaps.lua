@@ -58,8 +58,8 @@ keymap.set("i", "<C-Z>", "<ESC>ui")
 keymap.set("n", "<C-I>", "o")
 keymap.set("i", "<C-I>", "<ESC>o")
 
-keymap.set("n", "<leader>w", "0")
-keymap.set("n", "<leader>b", "$")
+keymap.set("n", "<leader>b", "0")
+keymap.set("n", "<leader>e", "$")
 
 
 
@@ -83,5 +83,6 @@ keymap.set("n", "<a-e>", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<C-R>", ":lua vim.lsp.buf.format {async = true}<CR>")
 keymap.set("i", "<C-R>", "<ESC>:lua vim.lsp.buf.format {async = true}<CR>i")
+keymap.set('n', '<leader>sl', ':nohlsearch<CR>', { noremap = true, silent = true })
 
 keymap.set('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})

@@ -39,7 +39,9 @@
         "pastyGreen": "#97e997",
         "pastyyelloa": "#dcf88b",
         "pastyPurple": "#857293",
-        "burntOrange": "#faf16d"
+        "burntOrange": "#faf16d",
+        "vesperOrange": "#ffcd92",
+        "pastelGreen": "#46f7d3"
     },
     "blocks": [
         {
@@ -57,7 +59,7 @@
                     }
                 },
                 {
-                    "foreground": "p:folder",
+                    "foreground": "p:pastelGreen",
                     "properties": {
                         "style": "folder"
                     },
@@ -68,7 +70,7 @@
                 {
                     "type": "git",
                     "style": "powerline",
-                    "foreground": "p:git",
+                    "foreground": "p:vesperOrange",
                     "template": " {{ .UpstreamIcon }} {{ .HEAD }} {{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }} ",
                     "properties": {
                         "branch_icon": "\uE0A0 ",
@@ -89,8 +91,8 @@
                     "type": "node",
                     "style": "diamond",
                     "display_mode": "files",
-                    "foreground": "#64bb81",
-                    "template": " \uE781  {{ .Full }} "
+                    "foreground": "#6ecc8d",
+                    "template": " 𖣐  v{{ .Full }} "
                 }
             ],
             "newline": true
@@ -162,8 +164,8 @@
         }
     ],
     "transient_prompt": {
-        "foreground": "#FEF5ED",
-        "background": "transparent",
-        "template": "\ue285 "
+        "background": "#5fcbfd",
+        "foreground": "#1e1c21",
+        "template": "\u279C "
     }
 }
