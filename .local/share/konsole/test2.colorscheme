@@ -1,5 +1,5 @@
 [Background]
-Color=17,17,17
+Color=0,0,0
 RandomHueRange=360
 RandomSaturationRange=100
 
@@ -41,7 +41,7 @@ Color=177,242,186
 Color=177,242,186
 
 [Color3]
-Color=233,185,110
+Color=252,233,79
 
 [Color3Faint]
 Color=235,203,139
@@ -103,6 +103,6 @@ RandomSaturationRange=100
 [General]
 Blur=true
 ColorRandomization=false
-Description=Materila-Ocean-Custom-Black
-Opacity=0.89
+Description=test2
+Opacity=1
 Wallpaper=

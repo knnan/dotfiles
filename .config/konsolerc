@@ -8,7 +8,7 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=material-ocean(custom).profile,Test.profile
+Favorites=Test.profile,material-ocean(custom).profile,Total_black.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false

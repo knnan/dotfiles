@@ -155,8 +155,6 @@
                     "foreground_templates": [
                         "{{ if gt .Code 0 }}#ef5350{{ end }}"
                     ],
-                    // "template": "<#45F1C2>\u279C\u276f</> ",
-                    // "template": "<#45F1C2><b>\u279C</b></> ",
                     "template": "\u279C ",
                     "properties": {
                         "always_enabled": true
