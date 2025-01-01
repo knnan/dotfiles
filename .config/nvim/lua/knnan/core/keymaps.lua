@@ -85,4 +85,4 @@ keymap.set("n", "<C-R>", ":lua vim.lsp.buf.format {async = true}<CR>")
 keymap.set("i", "<C-R>", "<ESC>:lua vim.lsp.buf.format {async = true}<CR>i")
 keymap.set('n', '<leader>sl', ':nohlsearch<CR>', { noremap = true, silent = true })
 
-keymap.set('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})
+keymap.set('n', '<CR>', '<cmd>FineCmdline<CR>', { noremap = true })

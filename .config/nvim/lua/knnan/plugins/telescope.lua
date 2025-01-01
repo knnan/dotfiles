@@ -10,11 +10,12 @@ require("telescope").setup {
             previewer = false,
         },
         current_buffer_fuzzy_find = {
-            layout_strategy = "horizontal",
+            layout_strategy = "vertical",
             layout_config = {
                 prompt_position = "top",
-                preview_width = 0.55,
-                mirror = true
+                width= 0.5
+                -- preview_width = 0.55,
+                -- mirror = true
 
             }
         },

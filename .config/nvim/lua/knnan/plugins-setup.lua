@@ -34,12 +34,7 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'voldikss/vim-floaterm'
-    use {
-        'VonHeikemen/fine-cmdline.nvim',
-        requires = {
-            { 'MunifTanjim/nui.nvim' }
-        }
-    }
+
     -- Git related plugins
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'
@@ -50,7 +45,6 @@ return packer.startup(function(use)
     use 'navarasu/onedark.nvim' -- Theme inspired by Atom
     use 'marko-cerovac/material.nvim' -- Better material theme
     use 'sainnhe/gruvbox-material'
-
     use {
         "2nthony/vitesse.nvim",
         requires = {
@@ -162,8 +156,6 @@ return packer.startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         }
     }
-    -- for tabs
-    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

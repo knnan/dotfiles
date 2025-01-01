@@ -67,10 +67,10 @@ plugins=(
 )
 
 # Better SSH/Rsync/SCP Autocomplete
-sshhosts=($(tail -n +1 ~/.ssh/config.d/* 2>/dev/null | \
-  grep -i '^\s*host\(name\)\? ' | \
-  awk '{for (i = 2; i <= NF; i++) print $1 " " $i}' | \
-  grep -v '[*?%]' | awk '{for (i = 2; i <= NF; i++) printf $i" " }' | \
+sshhosts=($(tail -n +1 ~/.ssh/config.d/* 2>/dev/null |
+  grep -i '^\s*host\(name\)\? ' |
+  awk '{for (i = 2; i <= NF; i++) print $1 " " $i}' |
+  grep -v '[*?%]' | awk '{for (i = 2; i <= NF; i++) printf $i" " }' |
   sort -u))
 if [[ $#sshhosts -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts $sshhosts
