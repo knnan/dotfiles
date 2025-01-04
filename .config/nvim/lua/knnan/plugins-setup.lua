@@ -5,7 +5,7 @@ local ensure_packer = function()
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({
             'https://github.com/wbthomason/packer.nvim', install_path
-            'git', 'clone', '--depth', '1',
+        'git', 'clone', '--depth', '1',
         })
         vim.cmd [[packadd packer.nvim]]
         return true
@@ -18,7 +18,7 @@ local packer_bootstrap = ensure_packer()
 
 -- Autocommand to run :PackerCompile whenever plugins.lua gets updated with a autocommand
 -- Autoocommand that reloads neovim whenever you save this file
-vim.cmd([[ 
+vim.cmd([[
     augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -42,7 +42,7 @@ return packer.startup(function(use)
 
     -- appearance
     use { "catppuccin/nvim", as = "catppuccin" }
-    use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+    use 'navarasu/onedark.nvim'       -- Theme inspired by Atom
     use 'marko-cerovac/material.nvim' -- Better material theme
     use 'sainnhe/gruvbox-material'
     use {
@@ -61,7 +61,7 @@ return packer.startup(function(use)
     -- code editing
     use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
     use 'tpope/vim-commentary'
-    use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
+    use 'tpope/vim-sleuth'                    -- Detect tabstop and shiftwidth automatically
 
 
     -- fuzzy finder  original
@@ -104,19 +104,19 @@ return packer.startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            { 'williamboman/mason.nvim' }, -- Optional
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'hrsh7th/cmp-buffer' }, -- Optional
-            { 'hrsh7th/cmp-path' }, -- Optional
-            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
+            { 'hrsh7th/nvim-cmp' },                  -- Required
+            { 'hrsh7th/cmp-nvim-lsp' },              -- Required
+            { 'hrsh7th/cmp-buffer' },                -- Optional
+            { 'hrsh7th/cmp-path' },                  -- Optional
+            { 'saadparwaiz1/cmp_luasnip' },          -- Optional
+            { 'hrsh7th/cmp-nvim-lua' },              -- Optional
             -- Snippets
-            { 'L3MON4D3/LuaSnip' }, -- Required
-            { 'rafamadriz/friendly-snippets' } -- Optional
+            { 'L3MON4D3/LuaSnip' },                  -- Required
+            { 'rafamadriz/friendly-snippets' }       -- Optional
         }
     }
     use "lukas-reineke/lsp-format.nvim"
