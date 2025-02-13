@@ -11,6 +11,15 @@ lsp.ensure_installed({
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 lsp.setup()
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  disable = { "missing-parameters", "missing-fields" },
+  severity_sort = false,
+  float = true,
+})
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -57,8 +66,8 @@ local on_attach = function(_, bufnr)
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format',
     function(_) vim.lsp.buf.format() end, {
-    desc = 'Format current buffer with LSP'
-  })
+      desc = 'Format current buffer with LSP'
+    })
 end
 
 -- Enable the following language servers

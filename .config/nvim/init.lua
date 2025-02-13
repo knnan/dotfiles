@@ -11,6 +11,4 @@ require("knnan.plugins.lsp")
 require("knnan.plugins.nvimtree")
 require("knnan.plugins.format")
 require("knnan.plugins.misc")
-
-
-
+require("knnan.plugins.flash")

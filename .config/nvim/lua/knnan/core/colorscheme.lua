@@ -1,26 +1,67 @@
-require("vitesse").setup {
-  comment_italics = true,
-  transparent_background = true,
-  transparent_float_background = true, -- aka pum(popup menu) background
-  reverse_visual = false,
-  dim_nc = false,
-  cmp_cmdline_disable_search_highlight_group = false, -- disable search highlight group for cmp item
-  -- if `transparent_float_background` false, make telescope border color same as float background
-  telescope_border_follow_float_background = true,
-  -- similar to above, but for lspsaga
-  lspsaga_border_follow_float_background = false,
-  -- diagnostic virtual text background, like error lens
-  diagnostic_virtual_text_background = false,
+-- require("vitesse").setup {
+--   comment_italics = true,
+--   transparent_background = true,
+--   transparent_float_background = true, -- aka pum(popup menu) background
+--   reverse_visual = false,
+--   dim_nc = false,
+--   cmp_cmdline_disable_search_highlight_group = false, -- disable search highlight group for cmp item
+--   -- if `transparent_float_background` false, make telescope border color same as float background
+--   telescope_border_follow_float_background = true,
+--   -- similar to above, but for lspsaga
+--   lspsaga_border_follow_float_background = false,
+--   -- diagnostic virtual text background, like error lens
+--   diagnostic_virtual_text_background = false,
+--   -- override the `lua/vitesse/palette.lua`, go to file see fields
+--   colors = {},
+--   themes = {
+--   background = '#000000',
+--   -- border = "#000000"
+--   },
+-- }
 
-  -- override the `lua/vitesse/palette.lua`, go to file see fields
-  colors = {
-  },
-  themes = {
-  background = '#000000',
-  -- border = "#000000"
+require('vesper').setup({
+    transparent = true, -- Boolean: Sets the background to transparent
+    italics = {
+        comments = true, -- Boolean: Italicizes comments
+        -- keywords = true, -- Boolean: Italicizes keywords
+        -- functions = true, -- Boolean: Italicizes functions
+        -- strings = true, -- Boolean: Italicizes strings
+        -- variables = true, -- Boolean: Italicizes variables
+    },
+    overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
+    palette_overrides = {}
+})
 
-  },
-}
+-- local c = require('vscode.colors').get_colors()
+-- require('vscode').setup({
+--     -- Alternatively set style in setup
+--     -- style = 'light'
+
+--     -- Enable transparent background
+--     transparent = false,
+
+--     -- Enable italic comment
+--     italic_comments = true,
+
+--     -- Underline `@markup.link.*` variants
+--     underline_links = true,
+
+--     -- Disable nvim-tree background color
+--     disable_nvimtree_bg = true,
+
+--     -- Override colors (see ./lua/vscode/colors.lua)
+--     color_overrides = {
+--         vscLineNumber = '#FFFFFF',
+--     },
+
+--     -- Override highlight groups (see ./lua/vscode/theme.lua)
+--     group_overrides = {
+--         -- this supports the same val table as vim.api.nvim_set_hl
+--         -- use colors from this colorscheme by requiring vscode.colors!
+--         Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+--     }
+-- })
+
 
 -- -- MATERIAL THEME
 -- require('material').setup({
@@ -177,5 +218,23 @@ require("vitesse").setup {
 -- vim.cmd.colorscheme("gruvbox-material")
 -- vim.cmd.colorscheme("material")
 -- vim.cmd.colorscheme("catppuccin-mocha")
+-- vim.cmd.colorscheme("vscode")
+-- vim.cmd.colorscheme("vitesse")
 
-vim.cmd.colorscheme("vitesse")
+
+vim.cmd.colorscheme("vesper")
+
+-- Telescope theme overrides for vesper theme
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#ff9e64", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#7dcfff", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = "#7dcfff", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = "#bb9af7", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#c0caf5", bold = true })
+vim.api.nvim_set_hl(0, "TelescopeMatching", { fg = "#00FF9C", bold = true })
+
+
+
+vim.api.nvim_set_hl(0, "IncSearch", { bg = "#46f7d3", fg = "#000000", bold = true })
+vim.api.nvim_set_hl(0, "CurSearch", { bg = "#51cf62", fg = "#000000", bold = true })
+vim.api.nvim_set_hl(0, "Search", { bg = "#2e2d2d", fg = "#46f7d3", bold = true })
+

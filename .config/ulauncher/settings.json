@@ -13,7 +13,7 @@
     "max-recent-apps": 3,
     "raise-if-started": true,
     "render-on-screen": "mouse-pointer-monitor",
-    "show-recent-apps": "3",
+    "show-recent-apps": "4",
     "show-tray-icon": true,
     "theme-name": "Gruvbox-Dark",
     "tray-icon-name": "ulauncher-indicator-symbolic"

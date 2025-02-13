@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local keymap = vim.keymap -- for cociseness
+local keymap = vim.keymap -- for conciseness
 
-vim.g.floaterm_keymap_toggle = '<Leader>ft'
+vim.g.floaterm_keymap_toggle = '<leader>ft'
 
 keymap.set("i", "jj", "<ESC>")
 
@@ -73,6 +73,7 @@ keymap.set("n", "<C-_>", ":Commentary<CR>")
 keymap.set("i", "<C-_>", "<ESC>:Commentary<CR>i")
 keymap.set("v", "<C-_>", ":Commentary<CR>")
 keymap.set("n", "m", "/")
+keymap.set('n', '<leader>sl', ':nohlsearch<CR>', { noremap = true, silent = true })
 
 
 keymap.set("n", "<C-W>", ":bdelete<CR>")
@@ -83,6 +84,10 @@ keymap.set("n", "<a-e>", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<C-R>", ":lua vim.lsp.buf.format {async = true}<CR>")
 keymap.set("i", "<C-R>", "<ESC>:lua vim.lsp.buf.format {async = true}<CR>i")
-keymap.set('n', '<leader>sl', ':nohlsearch<CR>', { noremap = true, silent = true })
 
-keymap.set('n', '<CR>', '<cmd>FineCmdline<CR>', { noremap = true })
+
+vim.keymap.set('n', '<a-i>', function() require("flash").jump() end, { desc = "Flash" })
+vim.keymap.set('n', 'S', function() require("flash").treesitter() end, { desc = "Flash Treesitter" })
+vim.keymap.set('o', 'r', function() require("flash").remote() end, { desc = "Remote Flash" })
+vim.keymap.set('x', 'R', function() require("flash").treesitter_search() end, { desc = "Treesitter Search" })
+vim.keymap.set('o', 'R', function() require("flash").treesitter_search() end, { desc = "Treesitter Search" })

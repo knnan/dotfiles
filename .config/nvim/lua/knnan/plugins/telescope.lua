@@ -13,7 +13,7 @@ require("telescope").setup {
             layout_strategy = "vertical",
             layout_config = {
                 prompt_position = "top",
-                width= 0.5
+                width = 0.5
                 -- preview_width = 0.55,
                 -- mirror = true
 
@@ -98,3 +98,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>sn', function()
     builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
+
+vim.keymap.set('n', '<leader>fp', function()
+    local opts = {}
+    opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+    opts.hidden = true
+    builtin.find_files(opts)
+end, { desc = '[F]ind [P]roject files' })

@@ -41,6 +41,8 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- appearance
+    use 'datsfilipe/vesper.nvim'
+    use 'Mofiqul/vscode.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'navarasu/onedark.nvim'       -- Theme inspired by Atom
     use 'marko-cerovac/material.nvim' -- Better material theme
@@ -63,7 +65,14 @@ return packer.startup(function(use)
     use 'tpope/vim-commentary'
     use 'tpope/vim-sleuth'                    -- Detect tabstop and shiftwidth automatically
 
-
+    -- navigation
+    -- Flash.nvim
+    use {
+        'folke/flash.nvim',
+        config = function()
+            -- Key mappings for Flash.nvim
+        end
+    }
     -- fuzzy finder  original
     use {
         'junegunn/fzf.vim',
