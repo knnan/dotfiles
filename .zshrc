@@ -44,6 +44,7 @@ export HISTORY_IGNORE="google*"
 export HISTORY_IGNORE="(pwd|cd ..|ghp*|clear|vi *|rf *|git commit*)"
 
 # export MANWIDTH=999
+export MANPAGER='nvim +Man!'
 
 # History
 HISTSIZE=1099999
@@ -60,7 +61,6 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_BEEP
 setopt EXTENDED_HISTORY
 
-export MANPAGER='nvim +Man!'
 
 plugins=(
   git
@@ -71,9 +71,9 @@ plugins=(
 )
 
 
-sshhosts=( $(cat ~/.ssh/**/*config | rg -i  "^\s*Host(name)?" | sed 's/^[ ]*//' | awk '{print $2}') )
+ssh_hosts=( $(cat ~/.ssh/**/*config | rg -i  "^\s*Host(name)?" | sed 's/^[ ]*//' | awk '{print $2}') )
 if [[ $#ssh_hosts -gt 0 ]]; then
-  zstyle ':completion:*:ssh:*' hosts $sshhosts
+  zstyle ':completion:*:ssh:*' hosts $ssh_hosts
 fi
 
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
