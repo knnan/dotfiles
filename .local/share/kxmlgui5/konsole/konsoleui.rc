@@ -51,15 +51,15 @@
   </Menu>
  </MenuBar>
  <ActionProperties scheme="Default">
-  <Action shortcut="" name="clone-tab"/>
-  <Action shortcut="Ctrl+Left" name="focus-view-left"/>
-  <Action shortcut="Ctrl+Right" name="focus-view-right"/>
-  <Action shortcut="" name="help_contents"/>
-  <Action shortcut="Ctrl+Up" name="focus-view-above"/>
-  <Action shortcut="Ctrl+Down" name="focus-view-below"/>
-  <Action shortcut="Ctrl+M" name="maximize-current-terminal"/>
-  <Action shortcut="Ctrl+Alt+Shift+I" name="add_bookmark"/>
-  <Action shortcut="Ctrl+," name="options_configure"/>
+  <Action name="clone-tab" shortcut=""/>
+  <Action name="focus-view-left" shortcut="Ctrl+Left"/>
+  <Action name="focus-view-right" shortcut="Ctrl+Right"/>
+  <Action name="help_contents" shortcut=""/>
+  <Action name="focus-view-above" shortcut="Ctrl+Up"/>
+  <Action name="focus-view-below" shortcut="Ctrl+Down"/>
+  <Action name="maximize-current-terminal" shortcut="Ctrl+M"/>
+  <Action name="add_bookmark" shortcut="Ctrl+Alt+Shift+I"/>
+  <Action name="options_configure" shortcut="Ctrl+,"/>
  </ActionProperties>
  <ActionProperties scheme="my-custom-shortcuts"/>
  <ActionProperties scheme="test"/>

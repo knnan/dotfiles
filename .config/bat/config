@@ -1,1 +1,2 @@
 --theme="1337"
+--map-syntax '/home/knnan/.ssh/config.d/*.config:SSH Config'

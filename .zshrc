@@ -43,7 +43,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=81'
 export HISTORY_IGNORE="google*"
 export HISTORY_IGNORE="(pwd|cd ..|ghp*|clear|vi *|rf *|git commit*)"
 
-# export MANWIDTH=999
+export MANWIDTH=999
 export MANPAGER='nvim +Man!'
 
 # History
@@ -71,13 +71,16 @@ plugins=(
 )
 
 
-ssh_hosts=( $(cat ~/.ssh/**/*config | rg -i  "^\s*Host(name)?" | sed 's/^[ ]*//' | awk '{print $2}') )
+ssh_hosts=( $(cat ~/.ssh/**/*config | rg -i  "^\s*Host(name)?"| sed 's/^[ ]*//' | awk '{print $2}') )
 if [[ $#ssh_hosts -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts $ssh_hosts
 fi
 
+# fzf-tab completions configs
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab:*' fzf-flags --height=~50
+zstyle ':fzf-tab:complete:ssh:*' fzf-flags --preview-window=:nohidden
+zstyle ':fzf-tab:complete:ssh:*' fzf-preview 'ssh -T -G $word | rg -i  "^User |^HostName |^Port |^ControlMaster |^ForwardAgent |^LocalForward |^IdentityFile |^RemoteForward |^ProxyCommand |^ProxyJump " | column -t | bat --language="SSH Config" --color=always --style=plain'
 
 source $ZSH/oh-my-zsh.sh
 # FZF configuration
@@ -96,7 +99,7 @@ export FZF_DEFAULT_OPTS='
 --border
 --layout=reverse
 --preview "echo {}"
---preview-window=right:40%:hidden:wrap
+--preview-window=right:40%:wrap:hidden
 --height=50%
 --bind tab:down,shift-tab:up
 --bind ctrl-space:toggle+down
