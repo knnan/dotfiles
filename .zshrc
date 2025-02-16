@@ -79,7 +79,7 @@ fi
 # fzf-tab completions configs
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab:*' fzf-flags --height=~50
-zstyle ':fzf-tab:complete:ssh:*' fzf-flags --preview-window=:nohidden
+zstyle ':fzf-tab:complete:ssh:*' fzf-flags --height=~50 --preview-window=:nohidden
 zstyle ':fzf-tab:complete:ssh:*' fzf-preview 'ssh -T -G $word | rg -i  "^User |^HostName |^Port |^ControlMaster |^ForwardAgent |^LocalForward |^IdentityFile |^RemoteForward |^ProxyCommand |^ProxyJump " | column -t | bat --language="SSH Config" --color=always --style=plain'
 
 source $ZSH/oh-my-zsh.sh
