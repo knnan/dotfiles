@@ -8,7 +8,7 @@ Width 1600=700
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=Test.profile,Total_black.profile,material-ocean(custom).profile
+Favorites=Total_black.profile,material-ocean(custom).profile,Test.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
@@ -19,7 +19,7 @@ Height 900=616
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAABkAAAANCAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1200
+Width 1600=800
 Width 1920=960
 Window-Maximized 1080x1920=true
 Window-Maximized 900x1600=true

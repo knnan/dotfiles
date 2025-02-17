@@ -41,6 +41,7 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- appearance
+    use("catgoose/nvim-colorizer.lua")
     use 'datsfilipe/vesper.nvim'
     use 'Mofiqul/vscode.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }

@@ -1,3 +1,4 @@
+require("colorizer").setup()
 -- require("vitesse").setup {
 --   comment_italics = true,
 --   transparent_background = true,
@@ -29,7 +30,9 @@ require('vesper').setup({
         -- variables = true, -- Boolean: Italicizes variables
     },
     overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
-    palette_overrides = {}
+    palette_overrides = {
+        primary = "#99FFE4",
+    }
 })
 
 -- local c = require('vscode.colors').get_colors()
@@ -225,7 +228,7 @@ require('vesper').setup({
 vim.cmd.colorscheme("vesper")
 
 -- Telescope theme overrides for vesper theme
-vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#ff9e64", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#1DE28F", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#7dcfff", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = "#7dcfff", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = "#bb9af7", bg = "NONE" })
@@ -237,4 +240,52 @@ vim.api.nvim_set_hl(0, "TelescopeMatching", { fg = "#00FF9C", bold = true })
 vim.api.nvim_set_hl(0, "IncSearch", { bg = "#46f7d3", fg = "#000000", bold = true })
 vim.api.nvim_set_hl(0, "CurSearch", { bg = "#51cf62", fg = "#000000", bold = true })
 vim.api.nvim_set_hl(0, "Search", { bg = "#2e2d2d", fg = "#46f7d3", bold = true })
+
+
+-- local colors = {
+-- 	-- background colors
+-- 	white = "#FFFFFF",
+-- 	black = "#343434",
+-- 	bg = "#101010",
+-- 	bgDark = "#161616",
+-- 	bgDarker = "#232323",
+-- 	bgFloat = "#282828",
+-- 	bgOption = "#343434",
+
+-- 	fg = mix("#FFFFFF", "#000000", math.abs(0.80)),
+-- 	fgAlt = "#FEFEFE",
+-- 	fgCommand = "#FEFEFE",
+-- 	fgInactive = "#65737E",
+-- 	fgDisabled = "#505050",
+-- 	fgLineNr = "#505050",
+-- 	fgSelection = "#343434",
+-- 	fgSelectionInactive = "#505050",
+
+-- 	-- border colors
+-- 	border = "#505050",
+-- 	borderFocus = "#65737E",
+-- 	borderDarker = "#A0A0A0",
+
+-- 	-- ui colors
+-- 	greenLight = mix("#99FFE4", "#000000", math.abs(0.85)),
+-- 	red = "#FF8080",
+-- 	purple = "#FFCFA8",
+-- 	redDark = "#FF8080",
+-- 	orange = "#FFCFA8",
+-- 	primary = "#A0A0A0",
+-- 	comment = mix("#8b8b8b", "#000000", math.abs(0.90)),
+-- 	orangeLight = "#FFCFA8",
+-- 	green = mix("#99FFE4", "#000000", math.abs(0.85)),
+-- 	yellowDark = "#FFC799",
+-- 	purpleDark = mix("#65737E", "#000000", math.abs(0.80)),
+-- 	symbol = "#65737E",
+-- 	secondary = "#FFFFFF",
+-- 	terminalbrightblack = "#343434",
+
+-- 	-- diagnostic colors
+-- 	error = "#FF8080",
+-- 	warn = "#FFC799",
+-- 	info = "#99FFE4",
+-- 	hint = "#65737E",
+-- }
 

@@ -10,6 +10,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
+export MANWIDTH=999
+export MANPAGER='nvim +Man!'
+
 # Xdg configs
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_DIR="$HOME/.cache"
@@ -43,8 +46,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=81'
 export HISTORY_IGNORE="google*"
 export HISTORY_IGNORE="(pwd|cd ..|ghp*|clear|vi *|rf *|git commit*)"
 
-export MANWIDTH=999
-export MANPAGER='nvim +Man!'
 
 # History
 HISTSIZE=1099999
@@ -61,6 +62,7 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_BEEP
 setopt EXTENDED_HISTORY
 
+source <(fzf --zsh)
 
 plugins=(
   git
@@ -69,6 +71,7 @@ plugins=(
   fast-syntax-highlighting
   you-should-use
 )
+
 
 
 ssh_hosts=( $(cat ~/.ssh/**/*config | rg -i  "^\s*Host(name)?"| sed 's/^[ ]*//' | awk '{print $2}') )
@@ -89,6 +92,8 @@ alias fd="fdfind"
 
 # Setting rg as the default source for fzf
 # export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules}/' 2> /dev/null"
+
+# Setting fd as the default source for fzf
 FD_DEFAULT_COMMAND='fdfind --hidden --no-ignore --follow --exclude ".git" --exclude "node_modules" . 2> /dev/null'
 export FZF_DEFAULT_COMMAND=$FD_DEFAULT_COMMAND
 
@@ -135,7 +140,6 @@ FZF_CTRL_K_COMMAND='fdfind --type d --no-ignore --follow --exclude ".git" --excl
 FZF_ALT_C_COMMAND="fdfind --hidden --follow --type d --no-ignore --ignore-file ${XDG_CONFIG_HOME}/fd/ignore . ~"
 
 # source fzf key bindings for zsh
-source "${XDG_CONFIG_HOME}/fzf/fzf.zsh"
 source "${XDG_CONFIG_HOME}/fzf/custom-keybindings.zsh"
 
 # zle     -N   fzf-file-widget
@@ -144,9 +148,9 @@ source "${XDG_CONFIG_HOME}/fzf/custom-keybindings.zsh"
 # zle     -N   fzf-cd-widget
 # bindkey '^k' fzf-cd-widget
 
-# bindkey '^ ' autosuggest-accept # (ctrl+space)
 export FZF_COMPLETION_TRIGGER=''
 bindkey '\e[20;5~' autosuggest-accept # (ctrl+enter) . set the terminal escape sequence for this up first in konsole => edit current profile => keyboards => xterm ;
+# bindkey '^ ' autosuggest-accept # (ctrl+space)
 # bindkey '^I' fzf-completion
 # bindkey '^[i' fzf-completion # (alt+i)
 
@@ -165,7 +169,6 @@ alias ld='lsd -d'
 alias ll='lsd -la'
 alias lst="lsd --tree --depth 2"
 alias rmdir="rm -rf"
-#alias bat=batcat # when installed from ubuntu source package the binary is named as batcat
 alias cat='bat'
 alias catp='bat -p'
 alias df='duf'
@@ -183,11 +186,13 @@ alias vpn_sify="sudo openvpn --cd ~/vpn/sify-vpn --config sify-vpn.ovpn  --auth-
 alias vpn="vpn_sify"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
 alias sys-update="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
 alias shl-update="upgrade_oh_my_zsh_all"
 
 alias dc="docker compose"
 alias dd="dev-dockers"
+
 alias ansp="ansible-playbook"
 
 unalias gl
